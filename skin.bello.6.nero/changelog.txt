@@ -1,0 +1,75 @@
+
+todo--- apply custom color with palette for lightpulse
+
+v6.0.0n
+(06/07/2017)
+- Fork of Bello v6.0.0 (Thanks to Nessus!)
+- Added Nero Mod + Color Themes
+- Added Home Animation Setting
+- Added Home Menu Overlay Setting
+- Added Classic Home Menu Setting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exact changes
+
+- add IncludesNero.xml to 720p folder
+- add      <include file="IncludesNero.xml"/>     		to includes.xml
+- add 	   <include>PULSE</include>   to line#15    -   IncludesHome.xml
+- add      <include>NeroSkinSettings</include>	  to line#284 - skinsettings.xml      	
+- add      <include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars</include><!-- NERO MOD -->    		  to line#142   - template.xml
+- add 	   <include condition="Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars_Classic</include><!-- NERO MOD -->     to line#143   - template.xml
+- add 	   <include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeMenuWraplist</include>             to line#22   -  Home.xml
+- add	   <include condition="Skin.HasSetting(ClassicHomeMenu)">HomeMenuWraplistClassic</include>       to line#23   -  Home.xml
+- add      <include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfo</include>       	 to line#25   -  Home.xml
+- add 	   <include condition="Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfoClassic</include>      to line#26   -  Home.xml
+- add 	   <visible>Skin.HasSetting(HomeMenuOverlay)</visible><!-- NERO MOD -->							 to line#11   - IncludesHome.xml
+
+
+- disable - line#1277 - includes.xml     -    Variable - BG.GlobalColor   
+
+- add neropulse folder to skin/extras/
