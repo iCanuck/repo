@@ -212,6 +212,21 @@
 	</extension>
 </addon>
 
+<addon id="script.speedtester" name="Speedtest" version="1.0.0" provider-name="iCanuck">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>executable</provides>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Speedtest</summary>
+      <description lang="en">Speedtest hosted by Ookla Speedtest</description>
+      <platform>all</platform>
+	  <email>iCanuck0604@gmail.com</email>
+    </extension>
+</addon>
+
 <addon id="service.library.data.provider" name="Library Data Provider" provider-name="BigNoid" version="0.3.0">
 	<requires>
 		<import addon="xbmc.json" version="7.9.0"/>
