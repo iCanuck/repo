@@ -242,16 +242,21 @@
 	</extension>
 </addon>
 
-<addon id="skin.bello.6.nero" version="6.0.0n" name="Bello 6 Nero" provider-name="Nessus,eQUIV,iCanuck">
+<addon id="skin.bellonero" version="3.0.8n" name="Bello Nero" provider-name="Nessus,eQUIV,iCanuck">
   <requires>
-		<import addon="xbmc.gui" version="5.12.0"/>
-		<import addon="script.skinshortcuts" version="1.0.17"/>
-		<import addon="script.skin.helper.service" version="1.1.3"/>
-		<import addon="script.extendedinfo" version="5.6.0"/>
-		<import addon="service.library.data.provider" version="0.3.0"/>
-		<import addon="script.skin.helper.widgets" version="1.0.22"/>
+		<import addon="xbmc.gui" version="5.3.0"/>
+		<import addon="service.skin.widgets" version="0.0.29"/>
+		<import addon="script.tvtunes" version="3.0.6"/>
+		<import addon="script.tv.show.next.aired" version="6.0.10"/>
+		<import addon="script.artwork.downloader" version="12.0.24"/>
+		<import addon="script.globalsearch" version="2.0.8"/>
+		<import addon="script.artistslideshow" version="1.6.5"/>
+		<import addon="script.playalbum" version="1.0.1"/>
+		<import addon="script.extendedinfo" version="1.0.0"/>
+		<import addon="script.grab.fanart" version="0.12.8"/>
+		<import addon="script.skinshortcuts" version="0.4.4"/>
 	</requires>
-	<extension point="xbmc.gui.skin" effectslowdown="0.75" debugging="false">
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.75" debugging="false">
 	    <res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
 	</extension>
   <extension point="xbmc.addon.metadata">
@@ -291,10 +296,10 @@
     <description lang="bg">Bello е потребителски интерфейс за Kodi. Целта му е да Ви удовлетвори в максимална степен, чрез своя уникален, бърз и удобен интерфейс, като същевременно не Ви лишава от най-новите функционалности на Kodi.</description>
     <description lang="de">Bello ist eine Benutzeroberfläche für das Kodi Media Center. Das Ziel von Bello ist es, Ihr Unterhaltungserlebnis mit der schnellen, einzigartigen und einheitlichen Oberfläche zusammen mit den neusten Kodi-Features zu maximieren.</description>
     <description lang="el">Το Bello είναι ένα Γραφικό Περιβάλλον Εργασίας (GUI) για το Κέντρο Πολυμέσων Kodi. Στόχος του Bello είναι να μεγιστοποιήσει την ψυχαγωγική σας εμπειρία μέσω του γρήγορου, μοναδικού και ενοποιημένου περιβάλλοντός του, που περιλαμβάνει όλες τις νέες λειτουργίες του Kodi.</description>
-    <description lang="en">This is the 6th generation of Bello skin for Kodi. Bello 6 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_AU">This is the 6th generation of Bello skin for Kodi. Bello 6 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_NZ">This is the 6th generation of Bello skin for Kodi. Bello 6 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
-    <description lang="en_US">This is the 6th generation of Bello skin for Kodi. Bello 6 is aiming to maximize your Kodi entertainment experience with its NEW Unique, Clean and Elegant interface while providing users a highly customization level and lots of cool features!</description>
+    <description lang="en">Bello is a GUI for Kodi Media Center. The goal of Bello is to maximize your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_AU">Bello is a GUI for Kodi Media Centre. The goal of Bello is to maximise your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_NZ">Bello is a GUI for Kodi Media Centre. The goal of Bello is to maximise your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_US">Bello is a GUI for Kodi Media Center. The goal of Bello is to maximize your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
     <description lang="es">Bello es una interfaz gráfica para Kodi. La meta de Bello es maximizar la experiencia de Kodi con su interfaz única, rápida y unificada y las últimas novedades de Kodi. </description>
     <description lang="fr">Bello est un thème pour Kodi Media Center. Le but de Bello est de maximiser votre expérience Kodi avec son interface rapide, fluide et unique pour toutes les fonctionnalités d'Kodi.</description>
     <description lang="fr_CA">Bello est une IUG pour le centre multimédia Kodi. Le but de Bello est de maximiser votre expérience de divertissement Kodi avec une interface rapide, unique et unifiée, ainsi qu'avec toutes les dernières fonctions de Kodi. </description>
@@ -346,25 +351,10 @@
     <disclaimer lang="zh">不支持使用鼠标</disclaimer>
     <disclaimer lang="zh_TW">不支援使用滑鼠</disclaimer>
     <platform>all</platform>
-    <license>Creative Commons Attribution-NonCommercial-Share Alike 4.0 International License</license>
-    <forum>http://forum.kodi.tv/forumdisplay.php?fid=198</forum>
+    <license>Creative Commons Attribution-NonCommercial-Share Alike 4.0 International Public License</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=158577</forum>
     <email>nessus85100 at hotmail dot com</email>
-    <source>https://github.com/Nessus85100/Bello.6</source>
-    <news>For a full list of changes visit https://github.com/Nessus85100/Bello.6/commits/master</news>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshot-10.jpg</screenshot>
-		</assets>
+    <source>https://github.com/Nessus85100/Bello</source>
   </extension>
 </addon>
 
