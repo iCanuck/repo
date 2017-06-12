@@ -1,6 +1,13 @@
 
 todo--- apply custom color with palette for lightpulse
 
+v6.0.0n1
+(06/11/2017)
+- Fixed classic menu overlay setting
+- Modified videoview visibility for plugins
+- Added default texture + text colors for all themes
+- Modified darkspot transparency
+
 v6.0.0n
 (06/07/2017)
 - Fork of Bello v6.0.0 (Thanks to Nessus!)
@@ -8,6 +15,9 @@ v6.0.0n
 - Added Home Animation Setting
 - Added Home Menu Overlay Setting
 - Added Classic Home Menu Setting
+
+
+
 
 
 
@@ -68,8 +78,10 @@ exact changes
 - add      <include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfo</include>       	 to line#25   -  Home.xml
 - add 	   <include condition="Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfoClassic</include>      to line#26   -  Home.xml
 - add 	   <visible>Skin.HasSetting(HomeMenuOverlay)</visible><!-- NERO MOD -->							 to line#11   - IncludesHome.xml
+- remove   !String.StartsWith(Container.FolderPath,plugin://plugin)  									 from 		  - ViewsVideosxml
 
-
-- disable - line#1277 - includes.xml     -    Variable - BG.GlobalColor   
+- disable - line#1267 - includes.xml     -    Variable - BG.GlobalColor  
+- disable - line#1272 - includes.xml     -    Variable - Textures.GlobalColor  
+- disable - line#1277 - includes.xml     -    Variable - Text.GlobalColor   
 
 - add neropulse folder to skin/extras/
