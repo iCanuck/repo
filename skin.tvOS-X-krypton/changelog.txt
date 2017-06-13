@@ -1,11 +1,33 @@
 
-v3.0.2a
-(06/03/2017)
-- mini release
-- added default video view to settings
+v3.0.3
+(06/12/2017)
+- fixed contextmenu alignment
+- added alternative home menu (wraplist)
+- added home animation setting
+- added centered home menu layout setting
+- added submenu to alt home menu
+- added color themes
 
+(06/06/2017)
+- added mute image to volumebar & homeclock
+- added no ipaddress warning to homeclock
+- fixed mypvrguide plot 
+- fixed shelf menu alignment
+- fixed pvr home button visibility
+
+(06/04/2017)
+- added background preview to background settings
+- disabled custom colors/patterns when custom wallpaper enabled or dark/white theme
+- movie/tvshow/music/pictures/livetv home buttons only visible when has content or enabled
+- added pictures to media sources menu
+- added fanart videoview
+- fixed watchedmarks & unwatchedepisodes alignment in videoviews
+- added watched marks to banner videoview
 
 v3.0.2
+(06/03/2017)
+- added default video view to settings
+
 (06/01/2017)
 - added banner shelf view
 - fixed pvr guide 11/12
