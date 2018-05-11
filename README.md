@@ -1,1 +1,1 @@
-# repo
+# iCanuck's Kodi Repo

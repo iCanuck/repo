@@ -1,0 +1,135 @@
+x.9.12 (apr22-16)
+* fixed home icon label color
+* fixed home icon size - addons, favs & pictures
+* fixed home shelf labels (alignment & textcolor)
+* added random to tv & music shelf
+* added new home shelf menu (recently added, random)
+* fixed all shadows
+* fixed login screen
+* fixed osd numeric
+* fixed addon info auto-update radiobutton
+* fixed programs list view icon alignment
+* changed enable scrollbars off by default
+* fixed enable scrollbars in all views
+* fixed enable options dialog in all views
+* added next viewmode to contextmenu when options dialog disabled
+* fixed fullscreen video codecinfo textcolor & alignment
+* fixed fullscreen video info
+* fixed videoosd seekbar button colors
+* fixed playerinfo while playing media
+* fixed home customizer label colors
+* fixed home customizer icons
+* fixed change icon default folder location (homecustomizer)
+* fixed custom addon/music shortcuts customizer
+* replaced default images (addon/favourites)
+* replaced weather icons
+* fixed myweather label alignment
+* fixed volumeosd colors
+* added roboto font (unicode support)
+* added startup animation
+* added disable unfocused label to skinsettings
+* added disable iconview info bar to skinsettings
+* added enable alternative iconview info bar to skinsettings
+* added bkgd to busybg
+* added thumb preview to filebrowser
+* added superbyron404 icons to skin/icons/-extra 
+* added thanks to testers in addon description
+
+x.9.11 (mar20-16)
+* minor fixes
+
+x.9.10 (mar07-16)
+* fixed sio2view watchedmarks
+* added videoview (3d wall)
+* adjusted font colors
+* added 3 more home icon shelf favorites
+* added labels for shelf favorites shelf
+* fixed dialogpvrchannelosd background size
+* fixed dialogpvrguideinfo buttons
+* fixed progressbg color
+* changed programs button to open program add-ons
+* added home menu livetv button function to skinsettings
+* added hide home menu power button to homecustomizer
+
+x.9.9 (mar05-16)
+* fixed dialogbusy overlapping dialogprogress
+* fixed fanart videoview poster overlap
+* fixed filebrowser(viewer)
+* added modified sio2view
+* fixed banner videoview
+* fixed all watched checkmarks in videoviews
+* fixed all unwatched-episodes labels in videoviews
+* fixed homecustomizer shelf settings
+* added icons to homecustomizer
+* added shelf favorites to homescreen
+* fixed rss text color
+* added 'enable fanart on videoviews' to skinsettings
+* added 'enable sort letter in views' to skinsettings
+
+x.9.8 (mar03-16)
+* replaced fonts with sanfrancisco
+* reduced font size on list views
+* fixed video seekbar transparency
+* adjusted pvr epg genre colors
+* added exodus icon
+
+x.9.7 (mar02-16)
+* added coverflow videoview
+* fixed movieshelf scroll
+* added enable atv3 slider to skinsettings (uses sio2 style slider)
+
+x.9.6 (feb28-16)
+* fixed dialogaddonsettings
+* fixed dialogaddoninfo
+* fixed dialognumeric
+* fixed clock - enabled by default
+* fixed left_panel alignment
+* added images to sliderex
+
+x.9.5 (feb27-16)
+* fixed all pvr views
+* added colors to epg for genres
+* added channel icons to epg guide
+* fixed livetv home icon
+
+x.9.4 (feb23-16)
+* fixed dialogprogress font color
+* fixed dialogyesno font color
+* fixed hide home search button
+* fixed home power button
+* fixed previous/next labels in musicvisualization
+* added 'check for updates' button to addonbrowser
+
+x.9.3 (feb21-16)
+* added ios-x style seekbar
+* fixed scrollbar colors
+* fixed dialogsubtitles
+* added videopreview to homescreen
+
+x.9.2 (feb20-16)
+* fixed videoinfo font colors
+* fixed dialogok & dialogyesno
+* replaced notification dialog
+* replaced weathershelf background
+
+x.9.1 (feb18-16)
+* mod from sio2-atv4(v3.0.0) from fastcolors
+* changed default theme to dark
+* added white theme (settings>appearance>theme)
+* combined textures with ios-x
+* added ios-x myweather
+* fixed icons videoview
+* added white buttons to all views
+* moved home icon folder to skin root folder
+* added home icon extras to icon folder
+* added home banner animation to skinsettings
+* fixed homepage customizer icons
+* rearranged settings category order
+* rearranged skinsettings menu
+* added favorites/addons to homepage customizer
+* added custom homebg to skinsettings
+* added custom otherbg to skinsettings
+* moved profiles to power menu
+* added checkmarks to videoviews
+* fixed font colors
+* various fixes

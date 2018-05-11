@@ -1,0 +1,255 @@
+
+
+v4.0.2
+(04/11/2018)
+- removed CB xmls for pub release
+(04/09/2018)
+- Major CB code cleanup
+
+v4.0.1
+(02/12/2018)
+- Merged Video & Program views
+- Other Minor Fixes
+(02/11/2018)
+- More Leia Changes
+
+v4.0.0
+(01/21/2018)
+- Initial Leia Changes
+
+v3.0.14
+(12/27/2017)
+- various fixes
+
+v3.0.13
+(12/22/2017)
+- shelf fixes
+
+v3.0.12
+(12/03/2017)
+- minor fixes
+
+v3.0.11
+(10/16/2017)
+- homescreen changes
+
+v3.0.10
+(10/15/2017)
+- loading fixes
+
+v3.0.9
+(10/11/2017)
+- shelf fixes
+
+v3.0.8
+(09/18/2017)
+- version bump
+
+v3.0.7
+(09/09/2017)
+- added icon fallback to episode iconview
+- fixed network location dialog (spincontrolex)
+- added limited to shelf content
+- fixed biglist arrow alignment
+- fixed keyboard / t9 buttons
+- added paused label to seekbar
+- added selector line to focused buttons on videoosd seekbar (alternative seekbar)
+
+v3.0.6
+(09/05/2017)
+- fixed DialogSettings spincontrolex id=9
+- added ram usage/total to dialogplayerprocessinfo.xml
+
+v3.0.5
+(08/25/2017)
+- reverted select tvshow shelf item opens videoinfo
+- fixed shelf onclick bug (content target=videos)
+- fixed fullscreen homebutton label
+- fixed videoosd topbar overlap
+- fixed various bugs shown in log
+
+v3.0.4
+(08/14/2017)
+- disabled musicosd extra buttons
+- fixed DialogPVRInfo bkgd
+- added episode shelf thumb/fanart fallback
+(08/12/2017)
+- added Shelf Menu skinsetting (skinsettings > home settings)
+- modified biglist - label wider - focused label scroll - leftpanel thumb only
+- modified OSDfullinfos (seekbar top menu)
+- added alternative seekbar
+- modified Player.ProgressCache color
+(08/08/2017)
+- modified addons shelf - video addons by default
+- added tvshows home button setting
+- added smartplaylists to library shelfmenu
+(08/06/2017)
+- select tvshow shelf item opens videoinfo (fixes no action on selection)
+(07/27/2017)
+- modified videoinfo window
+- fixed videoinfo overlay color
+- fixed dialogsettings (cecsettings)
+- added diffuse to watched episodes in iconview
+
+
+v3.0.3
+(06/12/2017)
+- fixed contextmenu alignment
+- added alternative home menu (wraplist)
+- added home animation setting
+- added centered home menu layout setting
+- added submenu to alt home menu
+- added color theme
+
+(06/06/2017)
+- added mute image to volumebar & homeclock
+- added no ipaddress warning to homeclock
+- fixed mypvrguide plot 
+- fixed shelf menu alignment
+- fixed pvr home button visibility
+
+(06/04/2017)
+- added background preview to background settings
+- disabled custom colors/patterns when custom wallpaper enabled or dark/white theme
+- movie/tvshow/music/pictures/livetv home buttons only visible when has content or enabled
+- added pictures to media sources menu
+- added fanart videoview
+- fixed watchedmarks & unwatchedepisodes alignment in videoviews
+- added watched marks to banner videoview
+
+v3.0.2
+(06/03/2017)
+- added default video view to settings
+
+(06/01/2017)
+- added banner shelf view
+- fixed pvr guide 11/12
+- minor fixes
+
+(05/30/2017)
+- fixed pvrguide + tvchannels (needs more fixes...)
+- fixed darkness/color menu header color
+
+(05/28/2017)
+- added fanart darkness setting
+- added shelf fanart darkness
+- fixed dialognumeric
+- added loading text at busy screen setting
+- fixed white theme / added dark theme
+- added view unfocused label in icon views setting (dark/white theme disabled by default)
+
+(05/26/2017)
+- fixed other/dialog pattern folder
+- fixed dialog background
+- added black background color
+- localized all labels
+- reorganized skinsettings
+
+(05/25/2017)
+- added shelf fanart background
+- fixed movie icon shelf + shelf menu overlap
+- fixed general shelf label animation
+- fixed shelf menu label animation
+- changed videoosd + osdinfo menu background color (same as banner color)
+- fixed osdinfo menu codec info
+
+(05/24/2017)
+- added passkey to adv. skinsettings  (disabled until later)
+- fixed poster shelf animation on column4
+- added list shelf view
+- modified icon view
+
+(05/23/2017)
+- added shelf menu
+- added shelf viewtypes
+
+(05/22/2017)
+- moved patterns to resource.images.tvOS-X
+- removed unused textures
+- added invert1/invert2 colors
+- fixed video/music/program views
+- added focused border to icon views/addonbrowser
+- fixed texture filename case
+
+v3.0.1
+(05/21/2017)
+- added custom home/other/dialog patterns
+- added custom home/other/dialog backgrounds
+- added home/other/dialog bg darkness settings
+- added home/other/dialog bg color settings
+- added select background to skinshortcuts
+
+(04/20/2017)
+- added clock to settings and myvideonav (incomplete) add clock to other windows
+- reduced shelf label size
+- fixed settings grouplist height
+- changed osdoverlay color
+- fixed dialogconfirm progress bar color
+- changed dialogconfirm bkgd size
+- fixed dialogbusy bkgd
+- added delayed "loading please wait" label to dialogbusy
+- replaced default font with SF UI DISPLAY font (from tvos-x)
+- added alternate roboto-regular font
+- added alternate light and strong font
+- changed myvideonav fanart diffuse color
+
+(04/16/2017)
+- changed music icon only visible when library has content
+- changed search icon only visible when search addon installed
+- fixed home customizer slider
+- added t9 auto completion to osd keyboard
+- added auto completion addon dependency
+- added extendedinfo addon dependency
+
+(04/09/2017)
+- fixed music library view focused label color
+- fixed music songs view focused label color
+- fixed filebrowser arrow alignment
+- increased dialogbusy image size
+- fixed dialogselect banner color
+- fixed addonbrowser left/right navigation
+- added fanart to addonbrowser
+
+(04/08/2017)
+- fixed home slider alignment for all rows
+- fixed shelf displaying on second row
+- fixed home icon zoom animation setting label alignment
+- fixed home icon label color
+- changed dialog bkgd to default bkgd
+- changed home favs icon to red
+- added homebanner skinsetting
+- added homebanner animation skinsetting
+- added appstore to settings menu
+- moved filemanager in settings menu
+- reduced dialogconfirm bkgd size
+- replaced watchstatus with checkmarks
+- added label to iconview / adjusted shadow
+- fixed videolibrary icon view
+- added home video preview
+- changed darktext color / added darktextunfo color
+- home kodi icon visible when network connection
+- changed watchcount bkgd badge color / re-aligned
+- added view scroll letters skinsetting
+- added fanart background skinsetting
+- added startup splash animation skinsetting
+
+(04/06/2017)
+- fixed home icon label alignment
+- added home slider / home icon zoom skinsetting
+
+(04/04/2017)
+- renamed backdrop folder
+- added Custom Other Wallpaper skinsetting
+
+(04/03/2017)
+- dark theme by default
+- modified myweather, weathershelf and weather icon
+- added Custom Home Wallpaper skinsetting
+- flipped radiobutton images
+- added filebrowser thumb preview
+- added up/down to homecustomizer contextmenu
+
+v3.0.0
+(04/02/2017)
+- Port of SiO2-Krypton v4.0.5
+

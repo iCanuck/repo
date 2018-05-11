@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.carbon" version="1.0.0" name="Carbon" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="3.0.3"/>	
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>Carbon Skin</description>
+		<disclaimer>Kodi v14 - Helix version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email>icanuck0604@gmail.com</email>
+    </extension>
+</addon>

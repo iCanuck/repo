@@ -41,6 +41,19 @@
 	</extension>
 </addon>
 
+<addon id="resource.images.tvOS-X-leia" name="tvOS-X Images" version="1.0.0" provider-name="iCanuck">
+	<extension point="kodi.resource.images" compile="true" type="studios" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">tvOS-X extra Images</summary>
+		<description lang="en">tvOS-X extra Images</description>
+		<platform>all</platform>
+		<license></license>
+	</extension>
+</addon>
+
 <addon id="resource.uisounds.tvos" version="1.0.0" name="tvOS UI Sounds" provider-name="MrLegendary">
   <requires>
     <import addon="kodi.resource" version="1.0.0"/>
@@ -104,6 +117,47 @@
 			<screenshot>resources/screenshot-05.jpg</screenshot>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="script.module.pytz" name="pytz" version="2014.2" provider-name="Stuart Bishop, Paul Backhouse">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+	    <summary lang="en">World Timezone Definitions for Python.</summary>
+	    <description lang="en">pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher. It also solves the issue of ambiguous times at the end of daylight saving time, which you can read more about in the Python Library Reference (datetime.tzinfo).</description>
+	    <platform>all</platform>
+	    <language></language>
+	    <license>MIT</license>
+	    <forum></forum>
+	    <website>https://pypi.python.org/pypi/pytz/</website>
+	    <source>https://github.com/powlo/script.module.pytz</source>
+	    <email></email>
+	    <disclaimer lang="en">Use at your own risk. The authors accept no liability. May cause permanent and/or catastrophic damage. Side effects include, but are not limited to loss of memory, seizures, sudden fits of rage, sudden fits of melancholy, inability to recall prominent capital cities, lack of respect for authority, fear of cats, temporary and/or permanent black outs. Avoid inhalation. Use in a well ventilated space. Keep away from small children.</disclaimer>
+	</extension>
+</addon>
+
+<addon id="script.module.requests"
+       name="requests"
+       version="2.9.1"
+       provider-name="kennethreitz, beenje">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Python HTTP for Humans</summary>
+    <description>Packed for KODI from https://github.com/kennethreitz/requests</description>
+    <platform>all</platform>
+    <language></language>
+    <license>Apache2</license>
+    <forum></forum>
+    <website>http://python-requests.org</website>
+    <source>https://github.com/beenje/script.module.requests</source>
+    <email>beenje AT gmail.com</email>
+  </extension>
 </addon>
 
 	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.16" provider-name="marcelveldt">
@@ -251,9 +305,7 @@
 		<import addon="script.module.simplejson" version="3.3.0"/>
 		<import addon="script.module.routing" version="0.1.0"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="plugin.py">
-		<provides>video</provides>
-	</extension>
+	<extension point="xbmc.python.pluginsource" library="plugin.py" />
 	<extension library="service.py" point="xbmc.service" start="login" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Browse movies and episodes in a variety of sorted playlists.</summary>
@@ -525,6 +577,354 @@
   </extension>
 </addon>
 
+<addon id="skin.bellonero-gotham" version="2.0.8n" name="Bello Nero - Gotham" provider-name="Nessus,eQUIV,iCanuck">
+  <requires>
+		<import addon="xbmc.gui" version="5.0.1"/>
+		<import addon="service.skin.widgets" version="0.0.29"/>
+		<import addon="script.favourites" version="5.0.2"/>
+		<import addon="script.tvtunes" version="3.0.6"/>
+		<import addon="script.tv.show.next.aired" version="6.0.10"/>
+		<import addon="script.artwork.downloader" version="12.0.24"/>
+		<import addon="script.globalsearch" version="2.0.8"/>
+		<import addon="script.artistslideshow" version="1.6.5"/>
+		<import addon="script.playalbum" version="1.0.1"/>
+		<import addon="script.videolanguage" version="0.1.0"/>
+		<import addon="script.grab.fanart" version="0.12.8" />
+    <import addon="service.library.data.provider" version="0.0.1"/>
+    <import addon="script.cinema.experience" version="4.0.10"/>
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="0.75" debugging="false">
+	    <res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af">'n GUI vir Kodi Media Sentrum</summary>
+    <summary lang="ar">واجهة رسومية لمركز الوسائط Kodi</summary>
+    <summary lang="bg">Облик за Kodi</summary>
+    <summary lang="ca">Una interfície gràfica per a l'Kodi</summary>
+    <summary lang="da">En GUI til Kodi Media Center</summary>
+    <summary lang="de">Ein GUI für das Kodi Media Center</summary>
+    <summary lang="el">Ένα Γραφικό Περιβάλλον για το Kodi</summary>
+    <summary lang="en">A GUI for Kodi Media Center</summary>
+    <summary lang="en_AU">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_NZ">A GUI for Kodi Media Centre</summary>
+    <summary lang="en_US">A GUI for Kodi Media Center</summary>
+    <summary lang="es">Una interfaz gráfica para Kodi</summary>
+    <summary lang="fr">Un thème pour Kodi Media Center</summary>
+    <summary lang="fr_CA">Une IUG pour le centre multimédia Kodi </summary>
+    <summary lang="gl">Un GUI para Centro de Medios Kodi</summary>
+    <summary lang="he">ממשק משתמש עבור Kodi מדיה סנטר</summary>
+    <summary lang="hu">Felszín az  Kodi Média centerhez</summary>
+    <summary lang="it">Un Interfaccia per Kodi Media Center</summary>
+    <summary lang="ja">Kodi メディアセンター用 GUI</summary>
+    <summary lang="ko">Kodi Media Center를 위한 그래픽 사용자 인터페이스</summary>
+    <summary lang="lt">Kodi media centro GUI</summary>
+    <summary lang="ms">GUI untuk Pusat Media Kodi</summary>
+    <summary lang="nl">Een gebruikersinterface voor Kodi Media Center </summary>
+    <summary lang="pl">Interfejs użytkownika dla Kodi Media Center</summary>
+    <summary lang="pt">Uma Interface para o Centro de Média Kodi</summary>
+    <summary lang="pt_BR">Uma Interface Grática para o Kodi Media Center</summary>
+    <summary lang="ru">Обложка для Kodi</summary>
+    <summary lang="sv">Ett grafiskt användargränssnitt för Kodi</summary>
+    <summary lang="th">ส่วนติดต่อผู้ใช้ สำหรับศูนย์รวมสื่อ Kodi</summary>
+    <summary lang="tr">Kodi Media Center İçin Arayüz</summary>
+    <summary lang="vi_VN">Giao diện cho Kodi Media Center</summary>
+    <summary lang="zh">Kodi媒体中心的一个图形用户界面</summary>
+    <summary lang="zh_TW">一個 Kodi 多媒體中心的圖形介面</summary>
+    <description lang="bg">Bello е облик за Kodi. Целта му е да Ви удовлетвори в максимална степен, чрез своя уникален, бърз и консистентен интерфейс. Като същевременно не Ви лишава от най-новите функции на Kodi.</description>
+    <description lang="de">Bello ist eine Benutzeroberfläche für das Kodi Media Center. Das Ziel von Bello ist es, Ihr Unterhaltungserlebnis mit der schnellen, einzigartigen und einheitlichen Oberfläche zusammen mit den neusten Kodi-Features zu maximieren.</description>
+    <description lang="el">Το Bello είναι ένα Γραφικό Περιβάλλον Εργασίας (GUI) για το Κέντρο Πολυμέσων Kodi. Στόχος του Bello είναι να μεγιστοποιήσει την ψυχαγωγική σας εμπειρία μέσω του γρήγορου, μοναδικού και ενοποιημένου περιβάλλοντός του, που περιλαμβάνει όλες τις νέες λειτουργίες του Kodi.</description>
+    <description lang="en">Bello is a GUI for Kodi Media Center. The goal of Bello is to maximize your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_AU">Bello is a GUI for Kodi Media Centre. The goal of Bello is to maximise your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_NZ">Bello is a GUI for Kodi Media Centre. The goal of Bello is to maximise your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="en_US">Bello is a GUI for Kodi Media Center. The goal of Bello is to maximize your Kodi entertainment experience with it's fast, unique and unified interface along with all the latest features of Kodi.</description>
+    <description lang="es">Bello es una interfaz gráfica para Kodi. La meta de Bello es maximizar la experiencia de Kodi con su interfaz única, rápida y unificada y las últimas novedades de Kodi. </description>
+    <description lang="fr">Bello est un thème pour Kodi Media Center. Le but de Bello est de maximiser votre expérience Kodi avec son interface rapide, fluide et unique pour toutes les fonctionnalités d'Kodi.</description>
+    <description lang="fr_CA">Bello est une IUG pour le centre multimédia Kodi. Le but de Bello est de maximiser votre expérience de divertissement Kodi avec une interface rapide, unique et unifiée, ainsi qu'avec toutes les dernières fonctions de Kodi. </description>
+    <description lang="gl">Bello e unha GUI para o Centro Multimedia Kodi. O obxectivo de Bello é que goce ó máximo da experiencia en entretemento no Kodi, unha interface única e unificada xunto con todas as funcións do Kodi.</description>
+    <description lang="hu">A Bello egy felszín az Kodi média centerhez. A Bello célja hogy maximalizálja az Kodi élvezeti értékét az egyedi, gyors és egyszerű felülettel és az Kodi legújabb fejlesztéseinek felhasználásával.</description>
+    <description lang="it">Bello è un'interfaccia per Kodi Media Center. L'obiettivo di Bello è di massimizzare la tua esperienza di intrattenimento con Kodi con la sua interfaccia veloce, unica ed unificata insieme alle nuove caratteristiche di Kodi.</description>
+    <description lang="ko">Bello는 Kodi Media Center의 그래픽 인터페이스입니다. Bello의 목표는 모든 최신 기능들에 대해 빠르고 독특하며 일관된 인터페이스를 제공하여 Kodi 엔터테인먼트 경험을 최대화하는데 있습니다.</description>
+    <description lang="lt">Bello Kodi Media Center GUI. Bello tikslas yra maksimaliai padidinti Kodi pramogą, unikali ir vieninga sąsaja kartu su visomis naujausiomis Kodi funkcijomis.</description>
+    <description lang="ms">Bello ialah GUI untuk Pusat Media Kodi. Matlamat Bello ialah untuk pengalaman hiburan Kodi yang maksimum dengan antaramuka yang pantas, unik dan sepadu bersama-sama dengan semua fitur terkini Kodi.</description>
+    <description lang="nl">Bello is een gebruikersinterface voor Kodi Media Center. Het doel van Bello is jouw Kodi entertainmentbeleving te maximaliseren met zijn snelle, unieke en universele interface samen met de laatste mogelijkheden van Kodi</description>
+    <description lang="pl">Bello to graficzny interfejs użytkownika dla Kodi Media Center. Celem Bello jest jaknajprzyjemniejsza praca użytkownika w Kodi z wykorzystaniem szybkiego, unikalnego oraz ujednoliconego interfejsu wraz z wszystkimi najnowszymi funkcjonalnościami Kodi.</description>
+    <description lang="pt_BR">Bello é uma interface gráfica para o Kodi. A meta de Bello é maximizar sua experiência de entretenimento com o Kodi através de sua interface única, rápida e integrada com todos os últimos recursos do Kodi.</description>
+    <description lang="ru">Bello - это обложка для Kodi. Ee быстрый, неповторимый и законченный интерфейс вместе возможностями Kodi позволят вам получить максимальное удовольствие от вашей цифровой коллекции.</description>
+    <description lang="sv">Bello är ett GUI för Kodi Media Center. Syftet med Bello är att fullborda din Kodi upplevelse med ett snabbt, unikt och samlat gränssnitt tillsammans med de allra senaste funktionerna av Kodi.</description>
+    <description lang="zh">Bello是一个Kodi媒体中心的图形界面. Bello的目标是通过快速, 独特和统一的界面以及最新的Kodi特性, 来最大化你的Kodi娱乐体验.</description>
+    <disclaimer lang="af">Muis gebruik word nie ondersteun</disclaimer>
+    <disclaimer lang="bg">Не се поддържа ползването на мишка</disclaimer>
+    <disclaimer lang="ca">L'ús del ratolí no està suportat</disclaimer>
+    <disclaimer lang="da">Mus understøttes ikke</disclaimer>
+    <disclaimer lang="de">Verwendung der Maus wird nicht unterstützt</disclaimer>
+    <disclaimer lang="el">Χωρίς υποστήριξη για ποντίκι</disclaimer>
+    <disclaimer lang="en">Mouse usage is not supported</disclaimer>
+    <disclaimer lang="en_AU">Mouse usage is not supported</disclaimer>
+    <disclaimer lang="en_NZ">Mouse usage is not supported</disclaimer>
+    <disclaimer lang="en_US">Mouse usage is not supported</disclaimer>
+    <disclaimer lang="es">El uso de ratón no esta soportado</disclaimer>
+    <disclaimer lang="fr">L'utilisation de la souris n'est pas supportée.</disclaimer>
+    <disclaimer lang="fr_CA">L'utilisation de la souris n'est pas prise en charge</disclaimer>
+    <disclaimer lang="gl">Uso do rato non soportado</disclaimer>
+    <disclaimer lang="he">עכבר אינו נתמך</disclaimer>
+    <disclaimer lang="hu">Egér használata nem támogatott</disclaimer>
+    <disclaimer lang="it">L'utilizzo del mouse non è supportato</disclaimer>
+    <disclaimer lang="ko">마우스 지원 안 함</disclaimer>
+    <disclaimer lang="lt">Pelės naudojimas nepalaikomas</disclaimer>
+    <disclaimer lang="mk">Користењето на глувче не е поддржано</disclaimer>
+    <disclaimer lang="ms">Penggunaan tetikus tidak disokong</disclaimer>
+    <disclaimer lang="nl">Het gebruik van een muis wordt niet ondersteund</disclaimer>
+    <disclaimer lang="pl">Używanie myszki nie jest obsługiwane</disclaimer>
+    <disclaimer lang="pt">Não é possível utilizar o rato</disclaimer>
+    <disclaimer lang="pt_BR">Uso de mouse não é suportado</disclaimer>
+    <disclaimer lang="ru">Использование мыши не поддерживается</disclaimer>
+    <disclaimer lang="sv">Att använda musen fungerar inte</disclaimer>
+    <disclaimer lang="th">ไม่รองรับการใช้งานด้วยเมาท์</disclaimer>
+    <disclaimer lang="tr">Fare kullanımı desteklenmiyor</disclaimer>
+    <disclaimer lang="vi_VN">Sử dụng chuột không được hỗ trợ</disclaimer>
+    <disclaimer lang="zh">不支持使用鼠标</disclaimer>
+    <disclaimer lang="zh_TW">不支援使用滑鼠</disclaimer>
+    <platform>all</platform>
+    <license>Creative Commons Attribution-NonCommercial-Share Alike 3.0 Unported License</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=158577</forum>
+    <email>nessus85100 at hotmail dot com</email>
+    <source>https://github.com/Nessus85100/Bello</source>
+  </extension>
+</addon>
+
+<addon id="skin.carbon" version="1.0.0" name="Carbon" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="3.0.3"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>Carbon Skin</description>
+		<disclaimer>Kodi v14 - Helix version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email>icanuck0604@gmail.com</email>
+    </extension>
+</addon>
+
+<addon id="skin.carbon-isengard" version="2.0.0" name="Carbon" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.9.0"/>
+        <import addon="service.skin.widgets" version="0.0.30"/>
+        <import addon="script.favourites" version="6.0.2"/>
+        <import addon="script.globalsearch" version="5.0.0"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>Carbon Skin</description>
+		<disclaimer>Kodi v15 - Isengard version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email>icanuck0604@gmail.com</email>
+    </extension>
+</addon>
+
+<addon id="skin.iOS-X" version="0.6.0" name="iOS-X" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.9.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="4.0.4"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>iOS-X is the lightweight evolutionary combination of kodi skins Quarts, Sio2, Carbon and Onyx. Combining ease of use and simplicity in an esthetically pleasing design.</description>
+		<disclaimer>Kodi v15 - Isengard version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email></email>
+    </extension>
+</addon>
+
+<addon id="skin.iOS-X-helix" version="0.6.0h" name="iOS-X - Helix" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="4.0.4"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>!! This version is only compatible with Helix !! iOS-X is the lightweight evolutionary combination of Kodi skins Quarts, Sio2, Carbon and Onyx. Combining ease of use and simplicity in an esthetically pleasing design.</description>
+		<disclaimer>Kodi v14 - Helix version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email></email>
+    </extension>
+</addon>
+
+<addon id="skin.iOS-X-jarvis" version="1.0.0" name="iOS-X - Jarvis" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="4.0.4"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>iOS-X is the lightweight evolutionary combination of kodi skins Quarts, Sio2, Carbon and Onyx. Combining ease of use and simplicity in an esthetically pleasing design.</description>
+		<disclaimer>Kodi v15 - Isengard version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email></email>
+    </extension>
+</addon>
+
+<addon id="skin.tvOS-X-isengard" version="0.9.12" name="tvOS-X - Isengard" provider-name="iCanuck">
+  <requires>
+    <import addon="xbmc.gui" version="5.9.0"/>
+    <import addon="script.favourites" version="3.2.5"/>
+    <import addon="service.library.data.provider" version="0.0.4"/>
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+	<summary lang="ar">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="be">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="bg">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="ca">Una Skin simple i pràctic basat en AppleTV4</summary>
+    <summary lang="cs">Jednoduchý a praktický kůže na základě AppleTV4</summary>
+    <summary lang="da">En enkel og handy Skin baseret på AppleTV4</summary>
+    <summary lang="de">Eine einfache und handliche Skin on AppleTv4 Basis</summary>
+    <summary lang="el">Ένα απλό και εύχρηστο δέρματος με βάση AppleTV4</summary>
+    <summary lang="en">Modified from Fastcolors, SiO2-ATV4 - A simple and handy visually Skin based on AppleTv4</summary>
+    <summary lang="es">Una Skin simple y práctica basada en AppleTv4</summary>
+    <summary lang="et">Lihtne ja mugav Naha põhineb AppleTV4</summary>
+    <summary lang="fi">Yksinkertainen ja kätevä Skin perustuvat AppleTV4</summary>
+    <summary lang="fr">Une Skin simple et pratique basée sur AppleTv4</summary>
+    <summary lang="gl">A pel simple e accesible con base na AppleTV4</summary>
+    <summary lang="he">עור פשוט ושימושי המבוסס על AppleTV4</summary>
+    <summary lang="hr">Jednostavan i praktičan Skin temelji se na AppleTV4</summary>
+    <summary lang="hu">Egy egyszerű és praktikus Skin alapuló AppleTV4</summary>
+    <summary lang="is">A einfaldur og vel Skin byggir á AppleTv4</summary>
+    <summary lang="it">Una Skin semplice e pratica basata su AppleTV4</summary>
+    <summary lang="ja">AppleTV4のに基づいて、シンプルかつ便利なスキン</summary>
+    <summary lang="km">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="ko">AppleTV4에서 기반 간단하고 편리 스킨</summary>
+    <summary lang="lt">Paprasta ir patogu Skin remiantis AppleTV4</summary>
+    <summary lang="mk">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="nl">Een eenvoudige en handige Skin op basis van AppleTV4</summary>
+    <summary lang="no">En enkel og praktisk Skin basert på AppleTV4</summary>
+    <summary lang="pl">Proste i wygodne skóry oparta na AppleTV4</summary>
+    <summary lang="pt">A Skin simples e acessível com base na AppleTV4</summary>
+    <summary lang="ro">O piele simplă și la îndemână pe AppleTV4</summary>
+    <summary lang="ru">Простая и удобная кожи основана на AppleTV4</summary>
+    <summary lang="sk">Jednoduchý a praktický kože na základe AppleTV4</summary>
+    <summary lang="sl">Preprost in priročen kože temelji na AppleTV4</summary>
+    <summary lang="sv">En enkel och praktisk hud baserad på AppleTV4</summary>
+    <summary lang="th">ผิวที่เรียบง่ายและมีประโยชน์จาก AppleTV4</summary>
+    <summary lang="tr">AppleTV4 dayanan basit ve kullanışlı Cilt</summary>
+    <summary lang="uk">Проста і зручна шкіри заснована на AppleTV4</summary>
+    <summary lang="vi">Giao diện đơn giản và tiện dụng dựa trên AppleTV4</summary>
+    <summary lang="zh">一个简单和方便的皮肤上的AppleTV4</summary>
+    <description lang="en">If you like Apple "everything at hand" policy for interfaces, You might want to give this Skin a try. It is designed to be similar to ATV4's Menu.[CR]Thanks to Fastcolors for SiO2.[CR] Thanks to Testers and Inspirers: Steverae, superbyron404, bigbadrabbit, and any other testers!</description>
+    <disclaimer>tvOS-X</disclaimer>
+  </extension>
+</addon>
+
+<addon id="skin.tvOS-X-jarvis" version="1.9.12" name="tvOS-X - Jarvis" provider-name="iCanuck">
+  <requires>
+    <import addon="xbmc.gui" version="5.10.0"/>
+    <import addon="script.favourites" version="3.2.5"/>
+    <import addon="service.library.data.provider" version="0.0.4"/>
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+	<summary lang="ar">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="be">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="bg">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="ca">Una Skin simple i pràctic basat en AppleTV4</summary>
+    <summary lang="cs">Jednoduchý a praktický kůže na základě AppleTV4</summary>
+    <summary lang="da">En enkel og handy Skin baseret på AppleTV4</summary>
+    <summary lang="de">Eine einfache und handliche Skin on AppleTv4 Basis</summary>
+    <summary lang="el">Ένα απλό και εύχρηστο δέρματος με βάση AppleTV4</summary>
+    <summary lang="en">Modified from Fastcolors, SiO2-ATV4 - A simple and handy visually Skin based on AppleTv4</summary>
+    <summary lang="es">Una Skin simple y práctica basada en AppleTv4</summary>
+    <summary lang="et">Lihtne ja mugav Naha põhineb AppleTV4</summary>
+    <summary lang="fi">Yksinkertainen ja kätevä Skin perustuvat AppleTV4</summary>
+    <summary lang="fr">Une Skin simple et pratique basée sur AppleTv4</summary>
+    <summary lang="gl">A pel simple e accesible con base na AppleTV4</summary>
+    <summary lang="he">עור פשוט ושימושי המבוסס על AppleTV4</summary>
+    <summary lang="hr">Jednostavan i praktičan Skin temelji se na AppleTV4</summary>
+    <summary lang="hu">Egy egyszerű és praktikus Skin alapuló AppleTV4</summary>
+    <summary lang="is">A einfaldur og vel Skin byggir á AppleTv4</summary>
+    <summary lang="it">Una Skin semplice e pratica basata su AppleTV4</summary>
+    <summary lang="ja">AppleTV4のに基づいて、シンプルかつ便利なスキン</summary>
+    <summary lang="km">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="ko">AppleTV4에서 기반 간단하고 편리 스킨</summary>
+    <summary lang="lt">Paprasta ir patogu Skin remiantis AppleTV4</summary>
+    <summary lang="mk">A simple and handy Skin visually based on AppleTv4</summary>
+    <summary lang="nl">Een eenvoudige en handige Skin op basis van AppleTV4</summary>
+    <summary lang="no">En enkel og praktisk Skin basert på AppleTV4</summary>
+    <summary lang="pl">Proste i wygodne skóry oparta na AppleTV4</summary>
+    <summary lang="pt">A Skin simples e acessível com base na AppleTV4</summary>
+    <summary lang="ro">O piele simplă și la îndemână pe AppleTV4</summary>
+    <summary lang="ru">Простая и удобная кожи основана на AppleTV4</summary>
+    <summary lang="sk">Jednoduchý a praktický kože na základe AppleTV4</summary>
+    <summary lang="sl">Preprost in priročen kože temelji na AppleTV4</summary>
+    <summary lang="sv">En enkel och praktisk hud baserad på AppleTV4</summary>
+    <summary lang="th">ผิวที่เรียบง่ายและมีประโยชน์จาก AppleTV4</summary>
+    <summary lang="tr">AppleTV4 dayanan basit ve kullanışlı Cilt</summary>
+    <summary lang="uk">Проста і зручна шкіри заснована на AppleTV4</summary>
+    <summary lang="vi">Giao diện đơn giản và tiện dụng dựa trên AppleTV4</summary>
+    <summary lang="zh">一个简单和方便的皮肤上的AppleTV4</summary>
+    <description lang="en">If you like Apple "everything at hand" policy for interfaces, You might want to give this Skin a try. It is designed to be similar to ATV4's Menu.[CR]Thanks to Fastcolors for SiO2.[CR] Thanks to Testers and Inspirers: Steverae, superbyron404, bigbadrabbit, and any other testers!</description>
+    <disclaimer>tvOS-X</disclaimer>
+  </extension>
+</addon>
+
 <addon id="skin.tvOS-X-krypton" version="3.0.3" name="tvOS-X" provider-name="iCanuck">
     <requires>
         <import addon="xbmc.gui" version="5.12.0"/>
@@ -547,6 +947,80 @@
             <screenshot>resources/screenshot04.jpg</screenshot>
             <screenshot>resources/screenshot05.jpg</screenshot>
             <screenshot>resources/screenshot06.jpg</screenshot>
+        </assets>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="ar">A simple and handy Skin visually based on AppleTv</summary>
+        <summary lang="be">A simple and handy Skin visually based on AppleTv</summary>
+        <summary lang="bg">A simple and handy Skin visually based on AppleTv</summary>
+        <summary lang="ca">Una Skin simple i pràctic basat en AppleTV</summary>
+        <summary lang="cs">Jednoduchý a praktický kůže na základě AppleTV</summary>
+        <summary lang="da">En enkel og handy Skin baseret på AppleTV</summary>
+        <summary lang="de">Eine einfache und handliche Skin on AppleTv Basis</summary>
+        <summary lang="el">Ένα απλό και εύχρηστο δέρματος με βάση AppleTV</summary>
+        <summary lang="en">A simple and handy visually Skin based on AppleTv</summary>
+        <summary lang="es">Una Skin simple y práctica basada en AppleTv</summary>
+        <summary lang="et">Lihtne ja mugav Naha põhineb AppleTV</summary>
+        <summary lang="fi">Yksinkertainen ja kätevä Skin perustuvat AppleTV</summary>
+        <summary lang="fr">Une Skin simple et pratique basée sur AppleTv</summary>
+        <summary lang="gl">A pel simple e accesible con base na AppleTV</summary>
+        <summary lang="he">עור פשוט ושימושי המבוסס על AppleTV</summary>
+        <summary lang="hr">Jednostavan i praktičan Skin temelji se na AppleTV</summary>
+        <summary lang="hu">Egy egyszerű és praktikus Skin alapuló AppleTV</summary>
+        <summary lang="is">A einfaldur og vel Skin byggir á AppleTv</summary>
+        <summary lang="it">Una Skin semplice e pratica basata su AppleTV</summary>
+        <summary lang="ja">AppleTVのに基づいて、シンプルかつ便利なスキン</summary>
+        <summary lang="km">A simple and handy Skin visually based on AppleTv</summary>
+        <summary lang="ko">AppleTV에서 기반 간단하고 편리 스킨</summary>
+        <summary lang="lt">Paprasta ir patogu Skin remiantis AppleTV</summary>
+        <summary lang="mk">A simple and handy Skin visually based on AppleTv</summary>
+        <summary lang="nl">Een eenvoudige en handige Skin op basis van AppleTV</summary>
+        <summary lang="no">En enkel og praktisk Skin basert på AppleTV</summary>
+        <summary lang="pl">Proste i wygodne skóry oparta na AppleTV</summary>
+        <summary lang="pt">A Skin simples e acessível com base na AppleTV</summary>
+        <summary lang="ro">O piele simplă și la îndemână pe AppleTV</summary>
+        <summary lang="ru">Простая и удобная кожи основана на AppleTV</summary>
+        <summary lang="sk">Jednoduchý a praktický kože na základe AppleTV</summary>
+        <summary lang="sl">Preprost in priročen kože temelji na AppleTV</summary>
+        <summary lang="sv">En enkel och praktisk hud baserad på AppleTV</summary>
+        <summary lang="th">ผิวที่เรียบง่ายและมีประโยชน์จาก AppleTV</summary>
+        <summary lang="tr">AppleTV dayanan basit ve kullanışlı Cilt</summary>
+        <summary lang="uk">Проста і зручна шкіри заснована на AppleTV</summary>
+        <summary lang="vi">Giao diện đơn giản và tiện dụng dựa trên AppleTV</summary>
+        <summary lang="zh">一个简单和方便的皮肤上的AppleTV</summary>
+
+
+        <description lang="en">If you like Apple "everything at hand" policy for interfaces, You might want to give this Skin a try. I designed it trying to put as few clicks as possible between You and what You're trying to do (or watch ;)</description>
+
+        <disclaimer>tvOS-X Skin</disclaimer>
+    </extension>
+</addon>
+
+<addon id="skin.tvOS-X-leia" version="4.0.2beta" name="tvOS-X - Leia" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.13.0"/>
+        <!--<import addon="script.extendedinfo" version="5.6.0"/>-->
+        <import addon="script.skinshortcuts" version="1.0.13"/>
+        <import addon="script.artwork.downloader" version="13.1.0"/>
+        <import addon="service.library.data.provider" version="0.0.4"/>
+        <import addon="resource.uisounds.tvos" version="1.0.0"/>
+		<import addon="resource.images.tvOS-X-leia" version="1.0.0"/>
+		<!--import addon="script.tvOS-X.backgrounds" version="1.0.0"/-->
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+            <screenshot>resources/screenshot01.jpg</screenshot>
+            <screenshot>resources/screenshot02.jpg</screenshot>
+            <screenshot>resources/screenshot03.jpg</screenshot>
+            <screenshot>resources/screenshot04.jpg</screenshot>
+            <screenshot>resources/screenshot05.jpg</screenshot>
+            <screenshot>resources/screenshot06.jpg</screenshot>
+            <screenshot>resources/screenshot07.jpg</screenshot>
+            <screenshot>resources/screenshot08.jpg</screenshot>
         </assets>
     </extension>
     <extension point="xbmc.addon.metadata">

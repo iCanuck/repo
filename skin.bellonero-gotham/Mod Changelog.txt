@@ -1,0 +1,448 @@
+
+* Bello Nero MOD Changelog *
+
+###################################################################
+
+* ADD FILES - "Includes_Nero" to 720p folder
+
+###################################################################
+
+* Includes.xml - ADD LINES - (Lines19)
+
+	<include file="Includes_Nero.xml" />
+
+	###################################################################
+
+* IncludesHome.xml - ADD LINES - (Line12-26) 
+
+			  <includes>PULSE</includes>	
+			  
+###################################################################
+
+
+
+* IncludesBackgrounds.xml - REPLACE LINES - (Line34)
+
+			<texture background="true">windows/bg/SKINDEFAULT.jpg</texture>
+
+###################################################################	
+
+OLD BELLO NERO BELOW (to add at later time to 3.0.8)
+
+
+
+* SkinSettings.xml - REPLACE LINES - (Line714-746) 
+
+					<control type="button" id="8404">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31135]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomImageBackgroundPath)][/COLOR]</label2>
+						<onclick condition="!IsEmpty(Skin.String(CustomImageBackgroundPath))">Skin.Reset(CustomFolderBackgroundPath)</onclick>
+						<onclick>Skin.SetFile(CustomImageBackgroundPath,.jpg|.png,special://skin/extras/backgrounds)</onclick>
+						<visible>Skin.HasSetting(CustomBackground) + !System.HasAddon(service.xbmc.icanuckwallpapers)</visible>
+					</control>
+					<control type="button" id="8405">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31135]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomImageBackgroundPath)][/COLOR]</label2>
+						<onclick condition="!IsEmpty(Skin.String(CustomImageBackgroundPath))">Skin.Reset(CustomFolderBackgroundPath)</onclick>
+						<onclick>Skin.SetFile(CustomImageBackgroundPath,.jpg|.png,special://home/addons/service.xbmc.icanuckwallpapers/backgrounds)</onclick>
+						<visible>Skin.HasSetting(CustomBackground) + System.HasAddon(service.xbmc.icanuckwallpapers)</visible>
+					</control>				
+					<control type="button" id="8406">
+	          <include>SettingsButton</include>
+						<label> • $LOCALIZE[31136]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomFolderBackgroundPath)][/COLOR]</label2>
+						<onclick>Skin.Reset(CustomImageBackgroundPath)</onclick>
+						<onclick>Skin.SetPath(CustomFolderBackgroundPath)</onclick>
+						<visible>Skin.HasSetting(CustomBackground)</visible>
+					</control>				
+					<control type="radiobutton" id="8407">
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[31131]</label>
+						<onclick>Skin.ToggleSetting(ShowCustomBackgroundOnHomeOnly)</onclick>
+						<selected>Skin.HasSetting(ShowCustomBackgroundOnHomeOnly)</selected>
+						<visible>Skin.HasSetting(CustomBackground)</visible>
+						<enable>!IsEmpty(Skin.String(CustomFolderBackgroundPath))</enable>
+					</control>
+				</control>
+
+###################################################################
+
+* SkinSettings.xml - REPLACE LINES - (Line41-136)
+
+			<control type="list" id="8800">
+				<left>0</left>
+				<top>0</top>
+				<width>295</width>
+				<height>420</height>
+				<itemgap>1</itemgap>
+				<onleft>9000</onleft>
+				<onright>8900</onright>
+				<onup>8800</onup>
+				<ondown>8800</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="52" width="295">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>295</width>
+						<height>48</height>
+						<texture>buttons/catbullet_nf.png</texture>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<top>0</top>
+						<width>295</width>
+						<height>48</height>
+				    <font>FontSize_20</font>
+						<textcolor>77white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="52" width="295">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>295</width>
+						<height>48</height>
+						<texture>buttons/catbullet_fo.png</texture>
+            <animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(8800)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<top>0</top>
+						<width>295</width>
+						<height>48</height>
+				    <font>FontSize_20</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+				  <!-- General -->
+					<item id="1">
+						<label>128</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Home Window -->
+					<item id="2">
+						<label>513</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Home Menu -->
+					<item id="3">
+						<label>31098</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Backgrounds -->
+					<item id="4">
+						<label>33069</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Views -->
+					<item id="5">
+						<label>31158</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Addons -->
+					<item id="6">
+						<label>24001</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- Quick Nav -->
+					<item id="7">
+						<label>31374</label>
+						<onclick>noop</onclick>
+					</item>
+				  <!-- BELLO NERO -->
+					<item id="8">
+						<label>40011</label>
+						<onclick>noop</onclick>
+					</item>					
+				</content>
+			</control>
+
+###################################################################
+
+* SkinSettings.xml - ADD LINES (Line1610-1806)
+
+				<!-- ================= -->
+				<!-- == Bello Nero == -->
+				<!-- ================= -->
+				<control type="grouplist" id="8201">
+					<include>CloseAnimation</include>
+					<visible>Container(8800).Hasfocus(8)</visible>
+					<left>297</left>
+					<top>0</top>
+					<width>782</width>
+					<height>414</height>
+					<itemgap>2</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>8800</onleft>
+					<onright>9000</onright>
+					<onup>8300</onup>
+					<ondown>8300</ondown>	
+		<!-- Disable Rename on Down -->					
+					<control type="radiobutton" id="8330">
+						<description>Disable Rename on Down</description>
+				<include>SettingsRadioButton</include>
+						<label>40012</label>
+						<onclick>Skin.ToggleSetting(DisableRenameDown)</onclick>
+						<selected>Skin.HasSetting(DisableRenameDown)</selected>
+					</control>					
+		<!-- Home Menu Bar SMOKE Disable -->		
+					<control type="radiobutton" id="8340">
+						<description>Home Menu Bar SMOKE - DISABLE</description>
+	          <include>SettingsRadioButton</include>
+						<label>$LOCALIZE[40000]</label>						
+						<onclick>Skin.ToggleSetting(HideLightpulse)</onclick>					
+						<selected>Skin.HasSetting(HideLightpulse)</selected>						
+					</control>					
+		<!-- Home Menu Bar SMOKE Color -->
+					<control type="button" id="8341">
+						<description>Home Menu Bar SMOKE Color</description>
+						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>40001</label>
+						<onclick>Skin.ToggleSetting(HideMenuSMOKEColor)</onclick>
+						<visible>!Skin.HasSetting(HideLightpulse)</visible>
+					</control>																			
+					<control type="radiobutton" id="8342">
+						<description>Home Menu Bar SMOKE Color - WHITE</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40002]</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-white)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-blue)">Skin.ToggleSetting(lightpulse-blue)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-green)">Skin.ToggleSetting(lightpulse-green)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-pink)">Skin.ToggleSetting(lightpulse-pink)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-red)">Skin.ToggleSetting(lightpulse-red)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-custom)">Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>
+						<selected>Skin.HasSetting(lightpulse-white)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>	
+					<control type="radiobutton" id="8343">
+						<description>Home Menu Bar SMOKE Color - BLUE</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40003]</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-blue)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-white)">Skin.ToggleSetting(lightpulse-white)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-green)">Skin.ToggleSetting(lightpulse-green)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-pink)">Skin.ToggleSetting(lightpulse-pink)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-red)">Skin.ToggleSetting(lightpulse-red)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-custom)">Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>
+						<selected>Skin.HasSetting(lightpulse-blue)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>					
+					<control type="radiobutton" id="8344">
+						<description>Home Menu Bar SMOKE Color - GREEN</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40004]</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-green)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-white)">Skin.ToggleSetting(lightpulse-white)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-blue)">Skin.ToggleSetting(lightpulse-blue)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-pink)">Skin.ToggleSetting(lightpulse-pink)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-red)">Skin.ToggleSetting(lightpulse-red)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-custom)">Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>
+						<selected>Skin.HasSetting(lightpulse-green)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>											
+					<control type="radiobutton" id="8345">
+						<description>Home Menu Bar SMOKE Color - PINK</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40005]</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-pink)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-white)">Skin.ToggleSetting(lightpulse-white)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-blue)">Skin.ToggleSetting(lightpulse-blue)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-green)">Skin.ToggleSetting(lightpulse-green)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-red)">Skin.ToggleSetting(lightpulse-red)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-custom)">Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>
+						<selected>Skin.HasSetting(lightpulse-pink)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>	
+					<control type="radiobutton" id="8346">
+						<description>Home Menu Bar SMOKE Color - RED</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40006]</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-red)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-white)">Skin.ToggleSetting(lightpulse-white)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-blue)">Skin.ToggleSetting(lightpulse-blue)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-green)">Skin.ToggleSetting(lightpulse-green)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-pink)">Skin.ToggleSetting(lightpulse-pink)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-custom)">Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>
+						<selected>Skin.HasSetting(lightpulse-red)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>						
+					<control type="radiobutton" id="8347">
+						<description>Home Menu Bar SMOKE Color - CUSTOM</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40008] $INFO[Skin.String(CustomSmokeColor)]</label>
+						<onclick>Skin.ToggleSetting(lightpulse-custom)</onclick>
+						<onclick condition="IsEmpty(Skin.String(CustomSmokeColor))">Skin.SetString(CustomSmokeColor)</onclick>												
+						<onclick condition="!IsEmpty(Skin.String(CustomSmokeColor))">Skin.Reset(CustomSmokeColor)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-white)">Skin.ToggleSetting(lightpulse-white)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-blue)">Skin.ToggleSetting(lightpulse-blue)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-green)">Skin.ToggleSetting(lightpulse-green)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-pink)">Skin.ToggleSetting(lightpulse-pink)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-red)">Skin.ToggleSetting(lightpulse-red)</onclick>			
+						<selected>Skin.HasSetting(lightpulse-custom)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEColor) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>																	
+		<!-- Home Menu Bar SMOKE TRANSPARENCY -->
+					<control type="button" id="8350">
+						<description>Home Menu Bar SMOKE Transparency</description>
+						<texturefocus border="100,2,100,2">buttons/settings_bt_fo.png</texturefocus>
+						<texturenofocus border="100,2,100,2">buttons/settings_bt_nf.png</texturenofocus>
+	          <include>SettingsButton</include>
+						<label>40010</label>
+						<onclick>Skin.ToggleSetting(HideMenuSMOKEtrans)</onclick>
+					</control>																			
+					<control type="radiobutton" id="8351">
+						<description>Home Menu Bar SMOKE Transparency1</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40009] #1</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-trans1)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-trans2)">Skin.ToggleSetting(lightpulse-trans2)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans3)">Skin.ToggleSetting(lightpulse-trans3)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans4)">Skin.ToggleSetting(lightpulse-trans4)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans5)">Skin.ToggleSetting(lightpulse-trans5)</onclick>						
+						<selected>Skin.HasSetting(lightpulse-trans1)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEtrans) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>	
+					<control type="radiobutton" id="8352">
+						<description>Home Menu Bar SMOKE Transparency2</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40009] #2</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-trans2)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-trans1)">Skin.ToggleSetting(lightpulse-trans1)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans3)">Skin.ToggleSetting(lightpulse-trans3)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans4)">Skin.ToggleSetting(lightpulse-trans4)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans5)">Skin.ToggleSetting(lightpulse-trans5)</onclick>
+						<selected>Skin.HasSetting(lightpulse-trans2)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEtrans) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>					
+					<control type="radiobutton" id="8353">
+						<description>Home Menu Bar SMOKE Transparency3</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40009] #3</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-trans3)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-trans1)">Skin.ToggleSetting(lightpulse-trans1)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans2)">Skin.ToggleSetting(lightpulse-trans2)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans4)">Skin.ToggleSetting(lightpulse-trans4)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans5)">Skin.ToggleSetting(lightpulse-trans5)</onclick>						
+						<selected>Skin.HasSetting(lightpulse-trans3)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEtrans) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>											
+					<control type="radiobutton" id="8354">
+						<description>Home Menu Bar SMOKE Transparency4</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40009] #4</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-trans4)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-trans1)">Skin.ToggleSetting(lightpulse-trans1)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans2)">Skin.ToggleSetting(lightpulse-trans2)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans3)">Skin.ToggleSetting(lightpulse-trans3)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans5)">Skin.ToggleSetting(lightpulse-trans5)</onclick>
+						<selected>Skin.HasSetting(lightpulse-trans4)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEtrans) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>										
+					<control type="radiobutton" id="8355">
+						<description>Home Menu Bar SMOKE Transparency5</description>
+	          <include>SettingsRadioButton</include>
+						<label> • $LOCALIZE[40009] #5</label>						
+						<onclick>Skin.ToggleSetting(lightpulse-trans5)</onclick>							
+						<onclick condition="Skin.HasSetting(lightpulse-trans1)">Skin.ToggleSetting(lightpulse-trans1)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans2)">Skin.ToggleSetting(lightpulse-trans2)</onclick>
+						<onclick condition="Skin.HasSetting(lightpulse-trans3)">Skin.ToggleSetting(lightpulse-trans3)</onclick>	
+						<onclick condition="Skin.HasSetting(lightpulse-trans4)">Skin.ToggleSetting(lightpulse-trans4)</onclick>						
+						<selected>Skin.HasSetting(lightpulse-trans5)</selected>						
+						<visible>Skin.HasSetting(HideMenuSMOKEtrans) + !Skin.HasSetting(HideLightpulse)</visible>
+					</control>																				
+				</control>	
+
+			  
+###################################################################	
+
+
+* IncludesHome.xml - REPLACE LINES - (Line33-42)
+
+					 <ondown condition="Container(20).HasFocus(15) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite1.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(16) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite2.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(17) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite3.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(18) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite4.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(19) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite5.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(20) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite6.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(21) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite7.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(22) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite8.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(23) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite9.Label)</ondown>
+					 <ondown condition="Container(20).HasFocus(24) + !Skin.HasSetting(DisableRenameDown)">Skin.SetString(CustomFavourite10.Label)</ondown>
+					 
+###################################################################					 
+
+* Language/English/string.po - ADD LINES (Line1127-1179)
+
+#######   BELLO NERO   ########
+
+msgctxt "#40000
+msgid "Disable Home Menu Smoke"
+msgstr ""
+
+msgctxt "#40001
+msgid "Home Menu Smoke Color"
+msgstr ""
+
+msgctxt "#40002
+msgid "White"
+msgstr ""
+
+msgctxt "#40003
+msgid "Blue"
+msgstr ""
+
+msgctxt "#40004
+msgid "Green"
+msgstr ""
+
+msgctxt "#40005
+msgid "Pink"
+msgstr ""
+
+msgctxt "#40006
+msgid "Red"
+msgstr ""
+
+msgctxt "#40007
+msgid "Purple"
+msgstr ""
+
+msgctxt "#40008
+msgid "Custom Hex Color"
+msgstr ""
+
+msgctxt "#40009
+msgid "Transparency"
+msgstr ""
+
+msgctxt "#40010
+msgid "Home Menu Smoke Transparency"
+msgstr ""
+
+msgctxt "#40011
+msgid "Bello Nero"
+msgstr ""
+
+msgctxt "#40012
+msgid "Disable Rename Custom Home Menu Button"
+msgstr ""
+
+###################################################################			  			 

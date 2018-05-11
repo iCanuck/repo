@@ -1,0 +1,265 @@
+2.0.0 (SeptXX-15)
+* Updated for Isengard(v15)
+
+1.0.0 (July26-15)
+* Added New Textures
+* Replaced Watched Status image with checkmarks (Listviews)
+* Changed Clock & Weathershelf info Font
+* Reduced Various Font Sizes
+* Added ATV iOS7 Shelf Background
+* Fixed DialogVideoInfo
+* Fixed List1 leftpanel
+* Various Fixes...
+
+0.9.9 (Feb19-15)
+* Fixed Disable Homescreen Label
+* Fixed DialogFullscreenInfo Bkgd
+* Fixed Orange & Green Icons (SiO2 Layout)
+* Fixed FileManager Alignment
+* Adjusted Default Selector Color
+* Removed Cinema Experience support
+* Reorganized Power button menu
+* Added Next View Mode to ContextMenu
+   - Only enabled when "View options dialog" Disabled
+
+0.9.8 (Jan28-15)
+* Updated Shelf Images (Flat)
+* Added BG to LiveTV Nav
+* Removed itunes trailer support
+* Fixes
+
+0.9.7 (Jan14-15)
+* Re-Added Clock toggle
+* Re-Added RSS Top/Bottom toggle
+* Fixed Label Alignment - HomeCustomizer & TVshelf
+* Added Video Preview Background to Homescreen 
+
+0.9.6 (Jan08-15)
+* Fixed Settings Menu 
+* Fixed Weather Label Alignment
+* Fixed Videoview Label Alignment
+
+0.9.5 (Nov16-14)
+* Updated for Helix(v14)
+* Added 2 VideoViews (Icon-Info, Icon-Big)
+* Reduced Custom Backgrounds
+* Added Openelec Support
+* Updated Various Icons
+
+0.2.9 (Oct17-14)
+* Tweaked Default BG
+* Tweaked MovieShelf
+* Added Hide Power Button
+* Many Fixes
+
+0.2.8 (Oct12-14)
+* Fixed TV Fav double listing
+* Added Toggle to Adv.SkinSettings (Vertical Scrolling of Custom TopRow Shelf)
+* Added Video Guides to SkinSettings (Under Construction)
+* Disabled Notify Sound (DING!)
+
+0.2.7a (Oct11-14)
+* Fixed Home Shelf Background
+
+0.2.7 (Oct10-14)
+* Changed Skin name to Carbon
+* Fixed Shelf Favorites
+
+0.2.6 (Oct09-14)
+ * Added Custom TopRow window
+ * Added Custom TopRow window BG (Adv.SkinSettings)
+ * Added TopRow Window BG Darkness (Adv.SkinSettings)
+ * Disabled DialogProgress window on Custom TopRow window
+ * Added 4 TopRow F\avorites (Adv.SkinSettings)
+ * Adjusted Home Slider on all Layouts
+ * Adjusted all Home Icon Colors
+ * Add HomeCustomizer Icon colors
+ * Adjusted all HomeCustomizer Layouts
+ * Fixes
+
+0.2.5 (Oct05-14)
+ * Changed Default Backgrounds
+ * Fixed Background Darkness Settings
+ * Fixed Notification Background 
+ * Increased EPG Font Size
+ * Replaced cO2 Icon
+ * Changed Default Slider/Select Color (Blue)
+ * Reduced Border thickness
+ * Added HomeIcon Border Transparency to HomeIcon Menu
+ * Added Custom HomeShelf Bkgd to Adv.SkinSettings
+ * Added HomeShelf Darkness to Adv.SkinSettings
+ * Fixed iCanuck Wallpapers 
+ * Updated iCanuck Wallpapers(0.0.3)
+ * Fixes
+
+0.2.4 (Sept30-14)
+* Added EPG Homescreen Icon
+* Increased EPG Font Size
+* Fixed Live TV popups
+* Fixed EPG colors
+* Fixed Video OSD buttons (added PVR-Rec.)
+* Fixed Weather Image Size on Home Icon
+* Notification window background color
+is now Primary Color
+
+0.2.3 (Sept29-14)
+* Added Custom EPG BG
+* Fixes
+
+0.2.2 (Sept26-14)
+* Added 25 More Colors
+* Added Custom 'Other' BG to SkinSettings
+* Added SiO2 Background to SiO2(X) Layouts
+* Added Images & Info to SkinSettings
+* * Moved Home Slider Animation Menu to 
+Home Icon Menu
+* Fixes
+
+0.2.1 (Sept23-14)
+* Redesigned VideoOSD
+* Added Customize OSD to Video Options
+* Redesigned MusicOSD (Under Construction)
+* Added Home Icon Animation Menu to Adv.SkinSettings
+* Added Hide TV Fav Shelf Label to Adv.SkinSettings
+* Fixes
+
+0.2.0 (Sept20-14)
+* Reorganized SkinSettings Menu
+* Added iOS Home Icon Layout
+* Added iOS Rotate Animation Setting (AdvancedSkinSettings)
+* Added Round Popup & Dialogs
+* Fixes
+
+0.1.9 (Sept19-14)
+* Added Home Icon Border to New Icon Layouts
+* Added White to Selector Color option
+* Fixes
+
+0.1.8 (Sept18-14)
+* Added Home Icon Layout Menu to SkinSettings
+* Added Custom Favorites Shelf
+ - Enable in HomeCustomizer > Favorites
+* Changed Scrollbar BG Transparency
+* Added Bkgd to Weather Shelf
+
+0.1.7 (Aug31-14)
+* Added Custom Addon to Top Row
+   - Added Addon Favs Shelf
+* Fixed Qwerty Keyb. 'Done' button  
+* Added More Custom Icons
+
+0.1.6 (Aug28-14)
+* Increased Font size of Keyb. Text Edit
+* Added Movie Favs & TV Favs to Top Row
+* Fixes
+
+0.1.5 (Aug26-14)
+* Added Black Focused font color to Adv. SkinSettings
+* Added Fallback Image to TVShelf Fanart
+* Changed WeatherShelf Condition Images
+* Increased Scrollbar Size
+* Added Hide Plot Menu to Adv. SkinSettings
+
+0.1.4 (Aug19-14)
+* Added Backgrounds to Various Windows/Dialog
+* Added Player Control to MusicNav 
+* 'Change Icon' in Homecustomizer opens to (xbmc/skin.co2/icons/)
+* Added Slider Selector to Movies Shelf
+* Added 'Clean Library' to Media Sources Menu
+* Fixed Homescreen Flicker during Library Update
+* Various Other Fixes
+
+0.1.3 (Aug17-14)
+* Added 9 Icon Themes
+
+0.1.2 (Aug15-14)
+* Added Icon Theme Setting to
+  Homescreen, Settings Popup, SkinSettings.
+* Added more icons to (xbmc/addons/skin.co2/icons) folder
+* Minor Fixes......
+
+0.1.1 (Aug10-14)
+* Added iCanuck's Wallpapers to SkinSettings
+  -Download iCanuck Wallpapers Service from 
+   iCanuckREPO before Enabling.
+
+0.1.0 (Aug08-14)
+* Lots of Fixes
+* SkinSettings Menu Tweaks
+   - Added 'Home Icon Color Setting'
+   - Added 'Advanced BG Menu'
+   - Added 'Custom Nav BG'
+   - Added 'Custom Keyboard BG'
+   - Added 'Custom Favorites BG' 
+   - Added 'Custom Weather BG'
+   - Added 'Nav BG Darkness'
+   - Added 'Keyboard BG Darkness'
+   - Added 'Favorites BG Darkness'
+   - Added 'Weather BG Darkness'
+   - Removed Textcolor Setting as
+     needs more work.
+        
+0.0.9 (Aug01-14)
+* SkinSettings Menu Tweaks
+   - Added 'Fanart BG Darkness' Setting
+   - Added 'Home Icon Transparency' Setting
+   - Added 'Home Icon Border' Setting
+   - Added 'BG Color - Primary' Setting
+   - Added 'Text Color' Setting
+   
+0.0.8 (July31-14)
+* Rebuilt SkinSettings Menu
+   - Added 'Home BG Darkness' Setting
+   - Added 'Other BG Darkness Setting'
+   - Added 'Selector Color Setting'
+   - Added 'Border Color Setting'
+   - Added 'Line Color Setting'
+   - Added 'Advanced SkinSettings Menu'
+   
+0.0.7 (July23-14)
+* Added Louis_Vuitton Theme
+* Added Icon Themes
+(Fiber, Gucci)
+
+0.0.6 (July22-14)
+* Added Icon Themes
+(BlueGray,DarkBlue,Fabric,Grunge,
+LightBlue,Orange,Red,SiO2,SiO2X-old)
+
+0.0.5 (July21-14)
+* Various Fixes
+* Changed Icon2 view to id#500
+* Changed Fanart view to id#59
+* Added Media Info to List1 view
+* Renamed cO2 view to List2 - Slider
+* Added background to animated scrollbar
+
+0.0.4 (July07-14)
+* Added Hide Home Labels in SkinSettings
+* Added Hide Home Lines in SkinSettings
+* Fixed Codec Infoscreen Color
+* Added 28 Backgrounds
+
+0.0.3 (July04-14)
+* Added Menu's Background Setting in SkinSettings
+* Added RSS Top/Bottom option in SkinSettings
+* Added Viewviews (Icon2, Icon3)
+* Added iOS7 Themed Icons (Settings>Appearance>Theme)
+* Fixes,Fixes,Fixes!
+
+0.0.2 (June26-14)
+* Changed Homescreen icon sizing and spacing
+* Added Homescreen Shader option in SkinSettings
+* Fixes,Fixes,Fixes! (Font Colors,Images,etc.)
+* Changed font from mplus-2p to roboto
+* Modified Video Views Modes
+* Added Color Schemes (Blue-Blue,Black-Blue,Black-Green)
+
+0.0.1 (June15-14)
+* Modification of SiO2-X - 2.1.6
+* Changed Homescreen Layout to Tiles
+* Modified all View Modes
+* Added Fonts (Big,Bold)
+
+
+

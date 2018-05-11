@@ -1,0 +1,94 @@
+0.6.0 (Jan-16)
+* Fixed Disable scrollbar in musicviews
+* Fixed TV Shelf label alignment
+* Fixed all PVR views label alignment
+* Fixed watched status marker in list views
+* Fixed unwatched count alignment in icon views
+* Fixed Subtitles Dialog
+* Added Disable unwatched episodes count label in advanced skinsettings
+* Added File Manager to Settings Menu when disabled on Homescreen
+* Disabled Homescreen Kodi logo with clock disable
+
+
+0.5.0 (Sept27-15)
+* Added iOS style home slider animation
+* Removed other slider animations
+* Redesigned TVshows Shelf with Posters   
+* Replaced busy image & busy animation
+* Re-added borders to dialogprogress & favorites window
+* Re-added clock to view windows
+* Reduced various font sizes
+* Reduced window border thickness from 2px to 1px
+* Removed various lines
+* Moved Shelf Favorites to first five home icons
+	(enable shelf favorites in advanced skinsettings)
+* Fixed keyboard key focused color
+* Fixed PVR TVchannels views
+* Fixed Music & Program Views
+* Fixed Filemanager selector size
+* Code cleanup
+
+0.4.0 (Sept13-15)
+* Fixed Seekbar BG & Colors
+* Added Line to Focused Play,Pause,Stop on Seekbar
+* Fixed Watched Checkmark alignment
+* Code cleanup
+
+0.3.0 (Sept07-15)
+* Mod of Onyx(v2.9.8)
+* Code Cleanup
+* Added Kodi logo to Homescreen clock
+* Added Disable Fanart BG to Fanart Darkness Menu
+* Increased default Fanart BG Darkness
+* Added Alternative Busy image	
+* Re-added Home Focus Zoom (not default)
+* Removed all un-needed images
+* Reduced overall skin filesize
+* Removed SkinSettings
+	- Icon Layout
+	- Icon Theme
+	- qwerty keyboard
+	- Homeshelf BG
+	- Primary BG Color	
+
+0.1.0 (Sept07-15)
+* Added support for Kodi(v15)
+* Fixed weather icons
+* Changed default colors to white
+* Changed default Seekbar colors in VideoOSD 
+* Moved position of rss feeds(top/middle)
+* Fixed login screen
+* Repositioned home icon layouts(sio2,ios and sio2x)
+* Adjusted home bg look
+* Re-added home shelf reflections
+* Repositioned all home shelf images
+* Repositioned all default list1 and list3 labels
+* Replaced selector
+* Updated textures
+* Updated fullscreen musicOSD
+* Fixed music player in list view
+* Removed many animations
+* Updated Videoinfo screen
+* Updated VideoOSD and view video info
+* Replaced default backgrounds
+* Added ios7 icons to icons folders
+* Resized all home shelf icons
+* Resized left panel images and text
+* Replaced default home icon layout
+* Replaced default home icon theme
+* Removed all bold from text
+* Added new weather backgrounds
+* Removed lines
+* Fixed add playlist screen
+* Fixed TV Fav double listing
+* Fixed recently added movies double listing
+* Fixed Home-screen weather icon position
+* Fixed positioning of favorites on home shelf
+* Fixed selector in addon manager/addon info screens
+* Changed weather screen to have all days showing
+* Added new home screen icon weather icons
+* Fixed Home Shelf Background
+* Removed various animations
+* Changed Skin name to Onyx
+* Fixed Shelf Favorites
+* Fixed Popup window Backgrounds

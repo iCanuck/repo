@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.iOS-X-helix" version="0.6.0h" name="iOS-X - Helix" provider-name="iCanuck">
+    <requires>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="service.skin.widgets" version="0.0.29"/>
+        <import addon="script.favourites" version="6.0.0"/>
+        <import addon="script.globalsearch" version="4.0.4"/>	
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary></summary>
+        <description>!! This version is only compatible with Helix !! iOS-X is the lightweight evolutionary combination of Kodi skins Quarts, Sio2, Carbon and Onyx. Combining ease of use and simplicity in an esthetically pleasing design.</description>
+		<disclaimer>Kodi v14 - Helix version</disclaimer>
+        <platform>all</platform>
+        <licence></licence>
+        <forum></forum>
+        <source></source>
+        <email></email>
+    </extension>
+</addon>

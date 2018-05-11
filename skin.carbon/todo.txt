@@ -1,0 +1,65 @@
+TODO LIST
+
+* BUILD all Homescreen Skin Settings into Home Customizer
+
+* icon2 videoview - change addon icons from scale to stretch (icon text cut off on genesis)
+
+*  DONE -Make square borders thinner and gradient
+
+* Fix Popup window Backgrounds
+- DialogOK.xml
+- Dialogtextviewer.xml
+- filebrowser.xml
+
+* Fix EPG Font Colors
+
+* Finish Popup Window Shape Menu (Square or Round)
+
+* Finish MusicOSD
+
+* Finish iCanuckWallpapers Update (More Backgrounds) - partially finished
+
+* Change OSD Keyboard to iOS style
+
+* Edit Homescreen Border Images
+
+* Fix Homescreen Video Preview Window 
+
+* Change MyWeather Window to have All Days Showing
+
+* Add Homescreen Icon Color Menu
+
+* Add More Homescreen Icon Animations
+
+* Add NoShelf Home Icon Layout
+
+* Add Right/Left Page Homescreen 
+(Similar to an iPhone - Will allow to have unlimited Shelf Items, 
+The homepage will page to the right and every top row icon will have it's own shelf items)
+
+* Create More Videoviews
+
+* Add Help Video Tutorials to Skin Settings 
+
+- Changing Home Background
+- Adding a Custom Top Shelf Background
+- Changing Other Backgrounds
+- Changing Selector Color - DONE
+- Changing Line Color
+- Changing Border Color
+* HomeIcon Menu
+- Changing Icon Layout 
+- Changing Icon Theme
+- Changing Icon Color
+- Changing Icon Transparency
+- Changing Always color icons
+- Adding Icon Borders
+- Changing Icon Border Color
+- Disabling Home Icon Label when NotFocused
+* Advanced Background Menu
+- Changing all Custom Backgrounds
+- Changing all Darkness Settings
+
+
+
+
