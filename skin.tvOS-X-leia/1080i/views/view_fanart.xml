@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="fanart">
+        <control type="group" description="Fanart">
+            <visible>Control.IsVisible(500)</visible>
+            <control type="image" description="Back">
+                <top>470</top>
+                <width>1920</width>
+                <height>612</height>
+                <texture colordiffuse="$VAR[bannercolor]" diffuse="images/White.png">$VAR[OtherBG]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="fixedlist" id="500" description="fanart">
+                <visible>Container.content(movies) | container.content(seasons) | container.content(tvshows)</visible>
+                <onup condition="!Skin.HasSetting(ViewsMenuOff)">9000</onup>
+                <onup condition="Skin.HasSetting(ViewsMenuOff)">noop</onup>
+                <onleft>500</onleft>
+                <onright>500</onright>
+                <viewtype label="$LOCALIZE[20445]">Fanart</viewtype>
+                <top>590</top>
+                <width>1920</width>
+                <height>700</height>
+                <orientation>horizontal</orientation>
+                <scrolltime>300</scrolltime>
+                <focusposition>1</focusposition>
+                <preloaditems>1</preloaditems>
+                <pagecontrol>60</pagecontrol>
+                <itemlayout width="276" height="500">
+                    <control type="image">
+                        <centerleft>128</centerleft>
+                        <top>80</top>
+                        <height>350</height>
+                        <width>230</width>
+                        <texture background="true">$VAR[locandine]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>					
+					<control type="label" description="Unwatched">
+						<visible>Integer.IsGreater(ListItem.Property(UnwatchedEpisodes),0)</visible>
+                        <right>40</right>
+                        <top>394</top>
+						<height>44</height>
+						<width>80</width>
+						<font>size24</font>
+						<align>right</align>
+						<shadowcolor>black</shadowcolor>
+						<label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+					</control>															
+                    <control type="image" description="WatchStatus">
+                        <right>34</right>
+                        <top>390</top>
+                        <height>38</height>
+                        <width>38</width>
+                        <aspectratio align="right">keep</aspectratio>
+                        <texture>$VAR[WatchStatus]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="276" height="500">
+                    <control type="group">
+                        <animation effect="zoom" end="120" center="128,430" time="150" tween="Back" easing="Out">Focus</animation>
+                        <animation effect="zoom" start="150" end="100" center="128,430" time="60">unFocus</animation>
+                        <control type="image">
+                            <centerleft>128</centerleft>
+                            <top>80</top>
+                            <height>350</height>
+                            <width>230</width>
+                            <texture background="true" fallback="DefaultVideoCover.png">$VAR[locandine]</texture>
+                            <aspectratio>scale</aspectratio>
+                        </control>
+						<control type="label" description="Unwatched">
+							<visible>Integer.IsGreater(ListItem.Property(UnwatchedEpisodes),0)</visible>
+							<right>40</right>
+							<top>394</top>
+							<height>44</height>
+							<width>80</width>
+							<font>size24</font>
+							<align>right</align>
+							<shadowcolor>black</shadowcolor>
+							<label>[B]$INFO[ListItem.Property(UnwatchedEpisodes)][/B]</label>
+						</control>															
+						<control type="image" description="WatchStatus">
+							<right>34</right>
+							<top>390</top>
+							<height>38</height>
+							<width>38</width>
+							<aspectratio align="right">keep</aspectratio>
+							<texture>$VAR[WatchStatus]</texture>
+						</control>
+                    </control>
+                </focusedlayout>
+            </control>			
+			<!--control type="image" description="Line Split">
+				<left>82</left>
+				<top>74</top>
+				<width>1748</width>
+				<height>1</height>
+				<texture>images/LineL.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control-->						
+            <control type="group" description="Media Info">
+                <visible>!String.IsEqual(ListItem.label,..)</visible>
+                <top>60</top>
+                <control type="image" description="Stars rating">
+                    <left>1688</left>
+                    <top>435</top>
+                    <height>45</height>
+                    <width>135</width>			
+                    <aspectratio aligny="center" align="right">keep</aspectratio>
+                    <texture colordiffuse="infos">$INFO[ListItem.Rating,badges/,.png]</texture>
+                </control>
+				<control type="label" description="Item Title Top">
+					<!--top>10</top-->				
+					<centerleft>960</centerleft>
+					<align>center</align>
+					<aligny>center</aligny>
+					<width>1260</width>
+					<height>60</height>
+					<font>size42B</font>
+					<info>ListItem.Label</info>
+				</control>				
+                <control type="group">
+                    <control type="textbox" description="Plot">
+                        <top>80</top>
+                        <left>98</left>
+                        <width>1724</width>
+                        <height>350</height>
+                        <textcolor>infos</textcolor>
+                        <!--shadowcolor></shadowcolor-->
+                        <align>justify</align>
+                        <autoscroll delay="7000" time="4300" repeat="10000"></autoscroll>
+                        <label>$INFO[ListItem.Plot]</label>
+                    </control>										
+                    <control type="label" description="Item Title">
+                        <top>440</top>
+                        <centerleft>960</centerleft>
+                        <font>size33</font>
+                        <height>40</height>
+                        <align>center</align>
+                        <width>1120</width>
+						<textcolor>darktextunfo</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>					
+                    <control type="label">
+                        <top>480</top>
+                        <centerleft>960</centerleft>
+                        <font>size26</font>
+                        <height>40</height>
+                        <align>center</align>
+                        <width>1120</width>
+						<textcolor>infos</textcolor>
+                        <label>$VAR[fanartinfolabel]</label>
+                    </control>					
+                    <control type="grouplist" description="Flags">
+                        <top>544</top>
+                        <width>1920</width>
+                        <height>150</height>
+                        <orientation>horizontal</orientation>
+                        <align>center</align>
+                        <control type="label">
+                            <height>50</height>
+                            <width>auto</width>
+                            <bordersize>3</bordersize>
+							<font>size22</font>
+							<textcolor>infos</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.VideoResolution][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+                            <height>50</height>
+                            <width>auto</width>
+                            <bordersize>3</bordersize>
+							<font>size22</font>
+							<textcolor>infos</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.VideoCodec, • ][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+                            <height>50</height>
+                            <width>auto</width>
+                            <bordersize>3</bordersize>
+							<font>size22</font>
+							<textcolor>infos</textcolor>
+                            <label>[UPPERCASE]$VAR[audiochannels, • ][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+                            <height>50</height>
+                            <width>auto</width>
+                            <bordersize>3</bordersize>
+							<font>size22</font>
+							<textcolor>infos</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.AudioCodec, • ][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <height>50</height>
+                            <width>auto</width>
+                            <bordersize>3</bordersize>
+							<font>size22</font>
+							<textcolor>infos</textcolor>
+                            <label>[UPPERCASE]$INFO[ListItem.FileExtension, • ][/UPPERCASE]</label>
+                        </control>
+                    </control>
+                    <control type="label" description="Genre">
+                        <top>510</top>
+                        <font>size26</font>
+                        <width>1920</width>
+                        <height>50</height>
+                        <align>center</align>
+						<textcolor>infos</textcolor>
+                        <label>$INFO[ListItem.Genre]</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

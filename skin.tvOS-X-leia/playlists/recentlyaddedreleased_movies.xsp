@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>Recently added and released</name>
+    <match>all</match>
+	<order direction="descending">year</order>
+    <order direction="descending">dateadded</order>
+</smartplaylist>

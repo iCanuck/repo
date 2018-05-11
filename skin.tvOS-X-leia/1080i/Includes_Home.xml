@@ -1,0 +1,2646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeButtonsCommons">
+		<left>0</left>
+		<width>300</width>
+		<height>81</height>
+		<texturefocus></texturefocus>
+		<label></label>
+		</include>
+		<include name="Sublist">
+		<top>592</top>
+		<width>300</width>
+		<height>430</height>
+		<scrolltime>280</scrolltime>
+		<itemlayout height="72" width="300">
+			<control type="label">
+				<left>150</left>
+				<top>0</top>
+				<width>261</width>
+				<height>72</height>
+				<textoffsetx>0</textoffsetx>
+				<font>size38</font>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+			</control>
+		</itemlayout>
+		<focusedlayout height="72" width="300">
+			<control type="label">
+				<left>150</left>
+				<top>0</top>
+				<width>261</width>
+				<height>72</height>
+				<textoffsetx>0</textoffsetx>
+				<font>size38</font>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+			</control>
+			</focusedlayout>
+	</include>
+    <include name="HomeSlider">
+	  <control type="image">
+		<visible>Control.HasFocus(9000)</visible>
+		<!--animation condition="!Container(9000).Row(0)" effect="slide" start="0,0" end="0,-629" time="220">Conditional</animation-->
+		<centertop>857</centertop>
+        <centerleft>241</centerleft>
+		<width>367</width>
+		<height>256</height>
+		<texture colordiffuse="invert2">images/HomeSlider.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation condition="Container(9000).Column(0)" effect="slide" end="0,0" time="190">Conditional</animation>
+		<animation condition="Container(9000).Column(1)" effect="slide" end="360,0" time="190">Conditional</animation>
+		<animation condition="Container(9000).Column(2)" effect="slide" end="720,0" time="190">Conditional</animation>
+		<animation condition="Container(9000).Column(3)" effect="slide" end="1080,0" time="190">Conditional</animation>
+		<animation condition="Container(9000).Column(4)" effect="slide" end="1440,0" time="190">Conditional</animation>
+		<animation condition="Container(9000).Row(0)" effect="slide" end="0,0" time="190">Conditional</animation>		
+		<animation condition="Container(9000).Row(1)" effect="slide" end="0,24" time="190">Conditional</animation>		
+		<animation condition="Container(9000).Row(2)" effect="slide" end="0,49" time="190">Conditional</animation>		
+		<animation condition="Container(9000).Row(3)" effect="slide" end="0,74" time="190">Conditional</animation>		
+		<animation condition="Container(9000).Row(4)" effect="slide" end="0,69" time="190">Conditional</animation>	
+		<animation condition="Container(9000).Row(5)" effect="slide" end="0,65" time="190">Conditional</animation>
+		<!--animation condition="Container(9000).Row(6)" effect="slide" end="0,199" time="190">Conditional</animation>	
+		<animation condition="Container(9000).Row(7)" effect="slide" end="0,489" time="190">Conditional</animation>
+		<animation condition="Container(9000).Row(8)" effect="slide" end="0,779" time="190">Conditional</animation-->		
+	  </control>	
+    </include>
+    <include name="HomeSliderCustom">
+	  <control type="image">
+		<visible>Control.HasFocus(211)</visible>
+		<!--animation condition="!Container(9000).Row(0)" effect="slide" start="0,0" end="0,-629" time="220">Conditional</animation-->
+		<centertop>250</centertop>
+        <centerleft>241</centerleft>
+		<width>367</width>
+		<height>256</height>
+		<texture colordiffuse="invert2">images/HomeSlider.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation condition="Container(211).Column(0)" effect="slide" end="0,0" time="190">Conditional</animation>
+		<animation condition="Container(211).Column(1)" effect="slide" end="360,0" time="190">Conditional</animation>
+		<animation condition="Container(211).Column(2)" effect="slide" end="720,0" time="190">Conditional</animation>
+		<animation condition="Container(211).Column(3)" effect="slide" end="1080,0" time="190">Conditional</animation>
+		<animation condition="Container(211).Column(4)" effect="slide" end="1440,0" time="190">Conditional</animation>
+		<animation condition="Container(211).Row(0)" effect="slide" end="0,0" time="190">Conditional</animation>		
+		<animation condition="Container(211).Row(1)" effect="slide" end="0,290" time="190">Conditional</animation>		
+		<animation condition="Container(211).Row(2)" effect="slide" end="0,580" time="190">Conditional</animation>		
+		<animation condition="Container(211).Row(3)" effect="slide" end="0,870" time="190">Conditional</animation>		
+		<animation condition="Container(211).Row(4)" effect="slide" end="0,1160" time="190">Conditional</animation>	
+		<animation condition="Container(211).Row(5)" effect="slide" end="0,1450" time="190">Conditional</animation>
+		<!--animation condition="Container(9000).Row(6)" effect="slide" end="0,199" time="190">Conditional</animation>	
+		<animation condition="Container(9000).Row(7)" effect="slide" end="0,489" time="190">Conditional</animation>
+		<animation condition="Container(9000).Row(8)" effect="slide" end="0,779" time="190">Conditional</animation-->		
+	  </control>	
+    </include>	
+	<include name="HomeIconZoomTop">
+		<animation effect="zoom" start="100" end="122" time="120" center="180,208" tween="Back" easing="Out">Focus</animation>
+		<animation effect="zoom" start="122" end="100" time="120" center="180,208">unFocus</animation>					
+		<animation effect="zoom" start="100" end="322" time="120" center="180,208" tween="Back" easing="Out">onClick</animation> 
+	</include>
+	<include name="HomeIconZoom">   
+		<animation effect="zoom" start="100" end="125" time="120" center="auto" tween="Back" easing="Out">Focus</animation>
+		<animation effect="zoom" start="125" end="100" time="200" center="auto">unFocus</animation>	 
+	</include>
+ 	<include name="HomeIconZoomShadow"> 
+		<control type="image" description="shade_base">
+		    <animation effect="fade" start="0" end="100" time="180">Focus</animation>
+            <animation effect="fade" start="100" end="0" time="100">unFocus</animation>
+			<top>40</top>
+			<centerleft>180</centerleft>
+			<animation effect="slide" start="0,0" end="0,34" time="240" reversible="true" tween="Back" easing="Out">Focus</animation>
+			<width>350</width>
+			<height>250</height>
+			<texture>icons/iconbase.png</texture>
+		</control>	
+	</include>
+	<include name="HomeBannerAnimation">	 
+		<animation condition="![Container(9000).Row(0)]" effect="slide" start="0,0" end="0,281" time="220">Conditional</animation>
+		<animation condition="![Container(9000).Row(0) | Container(9000).Row(1)]" effect="slide" start="0,0" end="0,263" time="220">Conditional</animation>
+		<animation condition="![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2)]" effect="slide" start="0,0" end="0,264" time="220">Conditional</animation>
+		<animation condition="![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3)]" effect="slide" start="0,0" end="0,265" time="220">Conditional</animation>
+		<animation condition="![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4)]" effect="slide" start="0,0" end="0,266" time="220">Conditional</animation>
+		<!--animation condition="![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) | Container(9000).Row(5) | Container(9000).Row(6)]" effect="slide" start="0,0" end="0,264" time="220">Conditional</animation-->
+	</include> 
+	<!--include name="HomeBannerStatic">	 
+		<animation condition="!Container(9000).Row(0)" effect="slide" start="0,0" end="0,-131" time="220">Conditional</animation>
+		<animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2)]]" effect="slide" start="0,0" end="0,-900" time="220">Conditional</animation>
+	</include-->
+	<include name="HomeMenuPanel">
+        <control type="panel" id="9000" description="Home Icons">	
+			<include condition="!Skin.HasSetting(HomeZoom)">HomePanelOpenClose</include>
+            <include>homeanimation</include>
+            <centerleft>960</centerleft>
+            <top>740</top>
+            <width>1800</width>
+            <height>1620</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <!--onup condition="[String.IsEqual(Container(311).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)] | [String.IsEqual(Container(313).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)]">9009</onup-->
+            <onup>700</onup>
+            <ondown>noop</ondown>
+            <orientation>vertical</orientation>
+            <scrolltime tween="sine" easing="inout">280</scrolltime>
+            <itemlayout height="265" width="360">
+                <control type="image" description="shade_base">
+                    <centerleft>180</centerleft>
+                    <width>350</width>
+                    <height>250</height>
+                    <texture>icons/iconbase.png</texture>
+                </control>
+                <control type="image" description="color base">
+                    <centerleft>180</centerleft>
+                    <centertop>117</centertop>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label2]</texture>
+                </control>
+                <control type="image" description="THMBSICONS">
+                    <centerleft>180</centerleft>
+                    <centertop>117</centertop>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Icon]</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="label" description="label">
+					<visible>[!Skin.HasSetting(labelunfo) + [![Skin.HasTheme(Dark)|Skin.HasTheme(White)]]] | [Skin.HasSetting(labelunfo) + [Skin.HasTheme(Dark)|Skin.HasTheme(White)]]</visible>
+                    <centerleft>180</centerleft>
+                    <top>220</top>
+                    <width>368</width>
+                    <height>24</height>
+                    <font>size28</font>
+					<textcolor>icontextunfo</textcolor>
+                    <align>center</align>
+                    <label>$INFO[ListItem.label]</label>
+                </control>				
+            </itemlayout>
+            <focusedlayout height="265" width="360" condition="Container(9000).Row(0)">
+                <control type="group">
+					<include condition="Skin.HasSetting(HomeIconZoom)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">HomeIconZoomTop</include>
+					<include condition="Skin.HasSetting(HomeIconZoom)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">HomeIconZoomShadow</include>
+                    <control type="image" description="color base">
+                        <centerleft>180</centerleft>
+                        <centertop>117</centertop>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label2]</texture>
+                    </control>
+                    <control type="image" description="THMBSICONS">
+                        <centerleft>180</centerleft>
+                        <centertop>117</centertop>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                </control>
+                <control type="label" description="label">
+                    <animation effect="fade" start="0" end="100" time="180">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="100">unFocus</animation>
+                    <centerleft>180</centerleft>
+                    <top>220</top>
+                    <width>368</width>
+                    <height>24</height>
+                    <font>size28</font>
+					<textcolor>icontext</textcolor>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.label][/B]</label>
+                </control>
+            </focusedlayout>						
+            <focusedlayout height="265" width="360" condition="!Container(9000).Row(0)">			
+                <control type="group">
+					<include condition="Skin.HasSetting(HomeIconZoom)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">HomeIconZoom</include>
+					<include condition="Skin.HasSetting(HomeIconZoom)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">HomeIconZoomShadow</include>	
+                    <control type="image" description="color base">
+                        <centerleft>180</centerleft>
+                        <centertop>117</centertop>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label2]</texture>
+                    </control>
+                    <control type="image" description="THMBSICONS">
+                        <centerleft>180</centerleft>
+                        <centertop>117</centertop>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                </control>
+                <control type="label" description="label">
+                    <animation effect="fade" start="0" end="100" time="180">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="100">unFocus</animation>
+                    <centerleft>180</centerleft>
+                    <top>236</top>
+                    <width>368</width>
+                    <height>24</height>
+                    <font>size28</font>
+					<textcolor>icontext</textcolor>
+                    <align>center</align>
+                    <label>[B]$INFO[ListItem.label][/B]</label>
+                </control>
+            </focusedlayout>
+            <content><include>skinshortcuts-mainmenu</include></content>
+        </control>			
+	</include>
+	
+	<include name="HomeMenuWraplist"> 
+		<control type="group">
+			<include>VisibleHiddenSlideAnimation</include>
+			<animation effect="slide" start="0,0" end="0,50" time="200" tween="sine" easing="out" condition="!Control.HasFocus(23)">Conditional</animation>
+    		<!--control type="image">
+				<visible>!Skin.HasSetting(HomeMenuOverlay)</visible>
+	        <include>FullscreenDimensions</include>
+			<include>Dimensions_Fullscreen</include>
+    			<texture background="true">windows/home/menu_overlay.png</texture>
+		      <include>HomeMenu_OpenCloseSlideAnimation</include>
+    		</control-->		
+			<include>PULSE</include> 
+			<!-- Left Aligned Home Menu -->
+			<control type="wraplist" id="9000">
+				<visible>!Skin.HasSetting(ClassicHomeMenu)</visible>
+				<description>Home Container</description>
+				<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<include>HomeMenu_Submenu_HiddenAnimation</include>
+				<left>30</left>
+				<top>566</top>
+				<width>1860</width>
+				<height>533</height>
+				<!--onup condition="Control.IsVisible(25)">SetFocus(25)</onup>
+				<onup condition="String.IsEmpty(Container(20).ListItem.Property(widgetPath)) | String.IsEqual(Container(25).NumItems,0)">SetFocus(21)</onup>
+				<ondown condition="[String.Contains(Container(20).ListItem.Property(hasSubmenu),True) + Integer.IsGreater(Container(23).NumItems,0)]">SetFocus(23)</ondown>
+				<onleft>20</onleft>
+				<onright>20</onright-->
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup condition="[String.IsEqual(Container(311).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)] | [String.IsEqual(Container(313).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)] | [String.IsEqual(Container(318).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),Ascension)]">9009</onup>
+				<onup>700</onup>
+				<ondown condition="[String.Contains(Container(9000).ListItem.Property(hasSubmenu),True) + Integer.IsGreater(Container(23).NumItems,0)]">SetFocus(23)</ondown>					
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<preloaditems>4</preloaditems>
+				<scrolltime tween="quadratic" easing="out">250</scrolltime>
+				<itemlayout width="360">
+					<control type="label">
+						<left>0</left>
+						<top>210</top>
+						<width>360</width>
+						<scroll>false</scroll>
+						<textcolor>icontextunfo</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>size42</font>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>						
+					</control>
+				</itemlayout>
+				<focusedlayout width="400">
+					<control type="label">
+						<!--animation type="Conditional" condition="ControlGroup(21).HasFocus">
+							<effect type="zoom" start="100" end="73" time="150" center="0,245"/>
+							<effect type="fade" start="100" end="45" time="150"/>
+						</animation>	
+						<include condition="Skin.HasSetting(HomeIconZoom)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">HomeIconZoom</include>	
+						<animation effect="zoom" start="100" end="122" time="120" center="180,208" tween="Back" easing="Out">Focus</animation>
+						<animation effect="zoom" start="122" end="100" time="120" center="180,208">unFocus</animation>
+-->
+						<left>0</left>
+						<top>210</top>
+						<width>400</width>
+						<scroll>true</scroll>
+						<textcolor>icontext</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>size60</font>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+				</focusedlayout>
+				<content>
+					<include>skinshortcuts-mainmenu</include>
+				</content>
+			</control>
+			<!-- Centered Home Menu -->
+			<control type="wraplist" id="9000">
+				<visible>Skin.HasSetting(ClassicHomeMenu)</visible>
+				<description>Home Container</description>
+				<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<include>HomeMenu_Submenu_HiddenAnimation</include>
+				<left>20</left>
+				<top>566</top>
+				<width>1880</width>
+				<height>720</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup condition="[String.IsEqual(Container(311).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)] | [String.IsEqual(Container(313).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)] | [String.IsEqual(Container(318).NumItems,0) + String.IsEqual(Container(9000).ListItem.Property(defaultID),Ascension)]">9009</onup>
+				<onup>700</onup>
+				<ondown condition="[String.Contains(Container(9000).ListItem.Property(hasSubmenu),True) + Integer.IsGreater(Container(23).NumItems,0)]">SetFocus(23)</ondown>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<!--preloaditems>4</preloaditems-->	 
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				 <itemlayout width="380">
+					<control type="label">
+						<left>0</left>
+						<top>210</top>
+						<width>380</width>
+						<scroll>false</scroll>
+						<textcolor>icontextunfo</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>size42</font>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				 </itemlayout>
+				 <focusedlayout width="400">
+					<control type="label">
+						<animation type="Conditional" condition="!ControlGroup(21).HasFocus">
+							<effect type="zoom" start="80" end="100" time="200" tween="sine" easing="out" center="auto" />
+							<effect type="fade" start="35" end="100" time="200" tween="sine" easing="out" />
+						</animation>						
+						<left>-15</left>
+						<top>200</top>
+						<width>400</width>
+						<scroll>true</scroll>
+						<textcolor>icontext</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>size60</font>
+						<align>center</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				 </focusedlayout>
+				<content>
+					<include>skinshortcuts-mainmenu</include>
+				</content>
+			</control>			
+		</control>
+	</include>	
+	
+	<!-- ============================= -->
+	<!-- ------------ PULSE ------------->
+	<!-- ============================= -->		
+
+	<variable name="darkpulse">
+		<value condition="Skin.HasTheme(Purple)">$VAR[resourceimgvar]pulse/purple_dark_pulse.png</value>
+		<value condition="Skin.HasTheme(Green)">$VAR[resourceimgvar]pulse/green_dark_pulse.png</value>
+		<value condition="Skin.HasTheme(Midnight)">$VAR[resourceimgvar]pulse/midnite_dark_pulse.png</value>		
+		<value condition="Skin.HasTheme(Nero)">$VAR[resourceimgvar]pulse/nero_dark_pulse.png</value>
+		<value condition="Skin.HasTheme(Pink)">$VAR[resourceimgvar]pulse/pink_dark_pulse.png</value>
+		<value condition="Skin.HasTheme(Red)">$VAR[resourceimgvar]pulse/red_dark_pulse.png</value>
+		<value condition="Skin.HasTheme(Dark)">$VAR[resourceimgvar]pulse/midnite_dark_pulse.png</value>	
+		<value condition="Skin.HasTheme(White)">$VAR[resourceimgvar]pulse/white_dark_pulse.png</value>		
+		<value>$VAR[resourceimgvar]pulse/blue_dark_pulse.png</value>
+	</variable>	
+	
+	<variable name="darkpulsediffuse">
+		<!--value condition="Skin.HasTheme(Purple)">66000000</value>
+		<value condition="Skin.HasTheme(Pink)">ffffffff</value>		
+		<value condition="Skin.HasTheme(Blue)"></value>
+		<value condition="Skin.HasTheme(Green)"></value>
+		<value condition="Skin.HasTheme(Midnight)"></value>		
+		<value condition="Skin.HasTheme(Nero)"></value>
+		<value condition="Skin.HasTheme(Red)"></value-->		
+		<value>ffffffff</value>
+	</variable>		
+	
+	<variable name="darkspotdiffuse">
+		<value condition="Skin.HasTheme(Purple)">66000000</value>
+		<value condition="Skin.HasTheme(Pink)">66000000</value>		
+		<!--value condition="Skin.HasTheme(Blue)"></value>
+		<value condition="Skin.HasTheme(Green)"></value>
+		<value condition="Skin.HasTheme(Midnight)"></value>		
+		<value condition="Skin.HasTheme(Nero)"></value>
+		<value condition="Skin.HasTheme(Red)"></value-->
+		<value condition="Skin.HasTheme(White)">10000000</value>			
+		<value>66000000</value>
+	</variable>		
+	
+	<variable name="lightpulse">
+		<value condition="Skin.HasTheme(Purple)|Skin.HasTheme(Midnight)|Skin.HasTheme(Nero)|Skin.HasTheme(Dark)|Skin.HasTheme(White)">$VAR[resourceimgvar]pulse/light_pulse_gray.png</value>	
+		<value condition="Skin.HasTheme(Blue)|Skin.HasTheme(Green)|Skin.HasTheme(Pink)|Skin.HasTheme(Red)">$VAR[resourceimgvar]pulse/light_pulse_blk.png</value>		
+		<value>$VAR[resourceimgvar]pulse/light_pulse_blk.png</value>
+	</variable>
+
+	<variable name="lightpulsediffuse">
+		<!--value condition="Skin.HasTheme(Purple)">66000000</value>
+		<value condition="Skin.HasTheme(Pink)">ffffffff</value>		
+		<value condition="Skin.HasTheme(Blue)"></value>
+		<value condition="Skin.HasTheme(Green)"></value>
+		<value condition="Skin.HasTheme(Midnight)"></value>		
+		<value condition="Skin.HasTheme(Nero)"></value>
+		<value condition="Skin.HasTheme(Red)"></value-->
+		<value condition="Skin.HasTheme(White)">22ffffff</value>
+		<value>ffffffff</value>
+	</variable>	
+
+	<include name="PULSE">
+	<!--- PULSE MOD -->
+
+		<control type="Group" description="Static Pulse">
+			<visible>Skin.HasSetting(HomeMenuAnimation)</visible>
+			<!-- DARK PULSE -->	
+			<top>476</top>	
+			<control type="image">
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">$VAR[darkpulse]</texture>
+			</control>	
+			<!-- LIGHT PULSE -->						
+			<control type="image">
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[lightpulsediffuse]">$VAR[lightpulse]</texture>
+			</control>
+			<!-- DARKSPOT -->		
+			<control type="image">
+				<visible>!Skin.HasSetting(ClassicHomeMenu)</visible>
+				<top>-20</top>
+				<left>-712</left>
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[darkspotdiffuse]">$VAR[resourceimgvar]pulse/darkspot.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<!-- DARKSPOT -- CLASSIC MENU -->
+			<control type="image">
+				<visible>Skin.HasSetting(ClassicHomeMenu)</visible>
+				<left>-4</left>
+				<top>-20</top>
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[darkspotdiffuse]">$VAR[resourceimgvar]pulse/darkspot.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>				
+		</control>
+				
+		<control type="Group" description="Animated Pulse">
+			<visible>!Skin.HasSetting(HomeMenuAnimation)</visible>
+			<!-- DARK PULSE -->	
+			<top>476</top>	
+			<control type="image">
+				<height>720</height>
+				<width>3280</width>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">$VAR[darkpulse]</texture>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="slide" start="-1360,0" end="0,0" time="30350" />
+						<effect type="slide" start="0,0" end="-1360,0" time="30350" delay="30350"/>
+					</animation>
+			</control>	
+			<!-- LIGHT PULSE -->						
+			<control type="image">
+				<height>720</height>
+				<width>3280</width>
+				<texture colordiffuse="$VAR[lightpulsediffuse]">$VAR[lightpulse]</texture>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="slide" start="0,0" end="-1360,0" time="30350" />
+						<effect type="slide" start="0,0" end="1360,0" time="30350" delay="30350"/>
+					</animation>
+			</control>
+			<!-- DARKSPOT -->			
+			<control type="image">
+				<visible>!Skin.HasSetting(ClassicHomeMenu)</visible>
+				<top>-20</top>
+				<left>-732</left>
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[darkspotdiffuse]">$VAR[resourceimgvar]pulse/darkspot.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="fade" start="30" end="94" time="5000"/>  
+						<effect type="fade" start="94" end="30" time="5000" delay="30350"/>             
+					</animation>
+			</control>
+			<!-- DARKSPOT -- CLASSIC MENU -->		
+			<control type="image">
+				<visible>Skin.HasSetting(ClassicHomeMenu)</visible>
+				<top>-20</top>
+				<left>-2</left>
+				<height>720</height>
+				<width>1920</width>
+				<texture colordiffuse="$VAR[darkspotdiffuse]">$VAR[resourceimgvar]pulse/darkspot.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="fade" start="30" end="94" time="5000"/>  
+						<effect type="fade" start="94" end="30" time="5000" delay="30350"/>             
+					</animation>
+			</control>			
+		</control>
+	</include>
+ 
+	<!-- ===================== -->
+	<!-- ====== Sub Menu ===== -->
+	<!-- ===================== -->
+ 
+	<include name="SubMenu">		
+		<!-- Submenus -->
+		<control type="wraplist" id="23">
+			<skinshortcuts>visibility</skinshortcuts>
+			<include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars</include>		
+			<include condition="Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars_Classic</include>
+			<content>
+				<include>skinshortcuts-submenu</include>
+			</content>
+		</control>
+		<!--control type="image">
+			<animation type="Conditional" condition="Control.HasFocus(23)">
+				<effect type="slide" start="0,-20" end="0,0" time="200" tween="sine" easing="out"/>
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+			<animation type="Conditional" condition="!Control.HasFocus(23)">
+				<effect type="slide" start="0,0" end="0,-20" time="200" tween="sine" easing="out"/>
+				<effect type="fade" start="100" end="0" time="200"/>
+			</animation>		
+			<left>0</left>
+			<top>465</top>
+			<width>1280</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">windows/home/submenus_line.png</texture>
+			<include>HomeMenu_OpenCloseSlideAnimation</include>
+			<include>VisibleHiddenSlideAnimation</include>
+		</control-->	
+		<!--include>skinshortcuts-template-submenus</include-->
+	</include>	
+
+	<!-- ===================== -->
+	<!-- Default Home SubMenus -->
+	<!-- ===================== -->
+	
+	<include name="HomeSubMenus_ItemLayout">
+		<left>0</left>
+		<top>0</top>
+		<width>230</width>
+		<height>37</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>size22</font>
+		<textcolor>icontextunfo</textcolor>
+		<shadowcolor>55000000</shadowcolor>
+		<label>$INFO[ListItem.label]</label>
+	</include>
+	<include name="HomeSubMenus_FocusedLayout">
+		<left>0</left>
+		<top>0</top>
+		<width>283</width>
+		<height>30</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>size34</font>
+		<textcolor>icontext</textcolor>
+		<shadowcolor>55000000</shadowcolor>
+		<label>$INFO[ListItem.label]</label>
+	</include>	
+	<include name="HomeSubMenus_ListVars">
+		<left>90</left>
+		<top>874</top>
+		<width>1700</width>
+		<height>125</height>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onleft>23</onleft>
+		<onright>23</onright>
+		<onback>9000</onback>
+		<focusposition>0</focusposition>
+		<preloaditems>4</preloaditems>
+		<orientation>horizontal</orientation>
+		<scrolltime tween="quadratic" easing="out">250</scrolltime>
+		<include>HomeMenu_OpenCloseSlideAnimation</include>
+		<include>VisibleHiddenSlideAnimation</include>
+		<animation type="Conditional" condition="Control.HasFocus(23)">
+			<effect type="slide" start="0,-20" end="0,0" time="200" tween="sine" easing="out"/>
+			<effect type="fade" start="0" end="100" time="100"/>
+		</animation>
+		<animation type="Conditional" condition="!Control.HasFocus(23)">
+			<effect type="slide" start="0,0" end="0,-20" time="200" tween="sine" easing="out"/>
+			<effect type="fade" start="100" end="0" time="100"/>
+		</animation>
+		<itemlayout width="232" height="43">
+			<control type="label">
+				<include>HomeSubMenus_ItemLayout</include>
+			</control>
+		</itemlayout>
+		<focusedlayout width="285" height="43">
+			<control type="label">
+				<include>HomeSubMenus_FocusedLayout</include>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<!-- ===================== -->
+	<!-- Classic Home SubMenus -->
+	<!-- ===================== -->
+
+	<include name="HomeSubMenus_ItemLayout_Classic">
+		<left>0</left>
+		<top>0</top>
+		<width>230</width>
+		<height>37</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>size22</font>
+		<textcolor>icontextunfo</textcolor>
+		<shadowcolor>55000000</shadowcolor>
+		<label>$INFO[ListItem.label]</label>
+	</include>
+	<include name="HomeSubMenus_FocusedLayout_Classic">
+		<left>0</left>
+		<top>0</top>
+		<width>283</width>
+		<height>30</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>size34</font>
+		<textcolor>icontext</textcolor>
+		<shadowcolor>55000000</shadowcolor>
+		<label>$INFO[ListItem.label]</label>
+	</include>	
+	<include name="HomeSubMenus_ListVars_Classic">
+		<left>130</left>
+		<top>874</top>
+		<width>1700</width>
+		<height>125</height>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onleft>23</onleft>
+		<onright>23</onright>
+		<onback>9000</onback>
+		<focusposition>3</focusposition>
+		<preloaditems>4</preloaditems>
+		<orientation>horizontal</orientation>
+		<scrolltime tween="quadratic" easing="out">250</scrolltime>
+		<include>HomeMenu_OpenCloseSlideAnimation</include>
+		<include>VisibleHiddenSlideAnimation</include>
+		<animation type="Conditional" condition="Control.HasFocus(23)">
+			<effect type="slide" start="0,-20" end="0,0" time="200" tween="sine" easing="out"/>
+			<effect type="fade" start="0" end="100" time="100"/>
+		</animation>
+		<animation type="Conditional" condition="!Control.HasFocus(23)">
+			<effect type="slide" start="0,0" end="0,-20" time="200" tween="sine" easing="out"/>
+			<effect type="fade" start="100" end="0" time="100"/>
+		</animation>
+		<itemlayout width="232" height="43">
+			<control type="label">
+				<include>HomeSubMenus_ItemLayout_Classic</include>
+			</control>
+		</itemlayout>
+		<focusedlayout width="285" height="43">
+			<control type="label">
+				<include>HomeSubMenus_FocusedLayout_Classic</include>
+			</control>
+		</focusedlayout>
+	</include>
+	
+	
+	<!------------------- UNEDITED ------------------------->
+	  
+	<!-- ========================================= -->
+	<!-- HomeMenu Extra Info & Submenus Indicators -->
+	<!-- ========================================= -->
+	
+	<include name="HomeMenuExtraInfo">
+  		<control type="group">
+        <!-- Submenus Indicators -->
+  			<control type="group">
+				  <include>HomeMenu_Submenu_HiddenAnimation</include>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus | Control.HasFocus(23)">
+            <effect type="slide" start="0,0" end="0,-50" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+				  <control type="wraplist" id="31">
+			      <left>0</left>
+			      <top>0</top>
+			      <height>2</height>
+			      <width>2</width>
+			      <orientation>horizontal</orientation>
+			      <focusposition>0</focusposition>
+			      <autoscroll time="4000">true</autoscroll>
+			      <viewtype>list</viewtype>
+			      <itemlayout width="2" height="2"/>
+			      <focusedlayout width="2" height="2"/>
+			      <content>
+		          <item id="1">
+	              <label></label>
+	              <onclick>noop</onclick>
+	              <visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetName)) + !Skin.HasSetting(AutoHideHomeWidgets)</visible>
+		          </item>
+		          <item id="2">
+	              <label></label>
+	              <onclick>noop</onclick>
+	    			    <visible>String.Contains(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
+		          </item>
+						</content>
+				  </control>
+    			
+    			<control type="grouplist">
+    			  <left>47</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>left</align>
+  				  <itemgap>6</itemgap>
+  			    <include>HomeMenu_OpenCloseSlideAnimation</include>
+					  <include>HomeMenu_ExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(31).HasFocus(1)</visible>
+    				<orientation>horizontal</orientation>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true" flipy="true">icons/submenu_arrow.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+	    			  <visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetName))</visible>
+    				</control>
+    				<control type="label">
+    					<width>490</width>
+    					<height>21</height>
+    					<font>FontSize_16B</font>
+    					<label>$INFO[Container(9000).ListItem.Property(widgetName),$LOCALIZE[31092]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+    			  <left>47</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>left</align>
+  				  <itemgap>6</itemgap>
+  			    <include>HomeMenu_OpenCloseSlideAnimation</include>
+					  <include>HomeMenu_ExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(31).HasFocus(2)</visible>
+    				<orientation>horizontal</orientation>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_arrow.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    				<control type="label">
+    					<width>490</width>
+    					<height>21</height>
+    					<font>FontSize_16B</font>
+    					<label>$LOCALIZE[1034]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    			</control>
+  			</control>
+
+        <!-- Right Side Extra Info -->
+  			<control type="group">
+  			  <include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <include>HomeMenu_Submenu_HiddenAnimation</include>
+				  <visible>!Skin.HasSetting(HideExtraInfo)</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus | Control.HasFocus(23)">
+            <effect type="slide" start="0,0" end="0,-50" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+					<!-- Movies -->
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + Library.HasContent(Movies)]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Home).Property(LatestMovie.1.Title),$LOCALIZE[31211]: ]$INFO[Window(Home).Property(LatestMovie.1.Year), (,)]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+				      <visible>!String.IsEmpty(Window(Home).Property(LatestMovie.1.Title))</visible>
+    				</control>
+    			</control>
+
+					<!-- TVShows -->
+				  <control type="wraplist" id="32">
+			      <left>0</left>
+			      <top>0</top>
+			      <height>2</height>
+			      <width>2</width>
+			      <orientation>horizontal</orientation>
+			      <focusposition>0</focusposition>
+			      <autoscroll time="10000">true</autoscroll>
+			      <viewtype>list</viewtype>
+			      <itemlayout width="2" height="2"/>
+			      <focusedlayout width="2" height="2"/>
+			      <content>
+		          <item id="1">
+	              <label></label>
+	              <onclick>noop</onclick>
+	              <visible>!String.IsEmpty(Window(Home).Property(LatestEpisode.1.EpisodeTitle))</visible>
+		          </item>
+		          <item id="2">
+	              <label></label>
+	              <onclick>noop</onclick>
+	    			    <visible>!Integer.IsEqual(Window(Home).Property(NextAired.TodayTotal),0) + Skin.HasSetting(NextAiredEnabled)</visible>
+		          </item>
+						</content>
+				  </control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(32).HasFocus(1) + !String.IsEmpty(Window(Home).Property(LatestEpisode.1.EpisodeTitle))</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Home).Property(LatestEpisode.1.ShowTitle),$LOCALIZE[31212]: ,  ]$INFO[Window(Home).Property(LatestEpisode.1.EpisodeSeason)]$INFO[Window(Home).Property(LatestEpisode.1.EpisodeNumber),x,,]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(32).HasFocus(2) + !Integer.IsEqual(Window(Home).Property(NextAired.TodayTotal),0)</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Home).Property(NextAired.TodayTotal), $LOCALIZE[31240]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+					<!-- Music -->
+				  <control type="wraplist" id="33">
+			      <left>0</left>
+			      <top>0</top>
+			      <height>2</height>
+			      <width>2</width>
+			      <orientation>horizontal</orientation>
+			      <focusposition>0</focusposition>
+			      <autoscroll time="10000">true</autoscroll>
+			      <viewtype>list</viewtype>
+			      <itemlayout width="2" height="2"/>
+			      <focusedlayout width="2" height="2"/>
+			      <content>
+		          <item id="1">
+	              <label></label>
+	              <onclick>noop</onclick>
+	              <visible>!String.IsEmpty(Window(Home).Property(LatestAlbum.1.Title))</visible>
+		          </item>
+		          <item id="2">
+	              <label></label>
+	              <onclick>noop</onclick>
+	    			    <visible>!String.IsEmpty(Window(Home).Property(LatestSong.1.Title))</visible>
+		          </item>
+						</content>
+				  </control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(33).HasFocus(1) + !String.IsEmpty(Window(Home).Property(LatestAlbum.1.Title))</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Home).Property(LatestAlbum.1.Title),$LOCALIZE[31213]: ,]$INFO[Window(Home).Property(LatestAlbum.1.Artist), - ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(33).HasFocus(2) + !String.IsEmpty(Window(Home).Property(LatestSong.1.Title))</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Home).Property(LatestSong.1.Title),$LOCALIZE[31222]: ,]$INFO[Window(Home).Property(LatestSong.1.Artist), - ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+
+
+
+
+					<!-- Live TV -->
+				  <control type="wraplist" id="34">
+			      <left>0</left>
+			      <top>0</top>
+			      <height>2</height>
+			      <width>2</width>
+			      <orientation>horizontal</orientation>
+			      <focusposition>0</focusposition>
+			      <autoscroll time="10000">true</autoscroll>
+			      <viewtype>list</viewtype>
+			      <itemlayout width="2" height="2"/>
+			      <focusedlayout width="2" height="2"/>
+			      <content>
+		          <item id="1">
+	              <label></label>
+	              <onclick>noop</onclick>
+	              <visible>PVR.IsRecording</visible>
+		          </item>
+		          <item id="2">
+	              <label></label>
+	              <onclick>noop</onclick>
+	    			    <visible>PVR.HasNonRecordingTimer</visible>
+		          </item>
+						</content>
+				  </control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(34).HasFocus(1)</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + PVR.IsRecording]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$LOCALIZE[19158]$INFO[PVR.NowRecordingTitle,: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+				      <visible>!String.IsEmpty(PVR.NowRecordingTitle)</visible>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(34).HasFocus(2)</visible>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + PVR.HasNonRecordingTimer]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$LOCALIZE[19157]$INFO[PVR.NextRecordingTitle,: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+				      <visible>!String.IsEmpty(PVR.NextRecordingTitle)</visible>
+    				</control>
+    			</control>
+
+					<!-- Weather -->
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+      			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)</visible>
+			      <visible>!String.IsEmpty(Window(Weather).Property(Alerts.RSS)) + !String.IsEmpty(Window(Weather).Property(Current.Condition))</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+  		        <label>$INFO[Window(Weather).Property(Alerts),$LOCALIZE[33050]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+					<!-- Addons -->
+    			<control type="grouplist">
+  				  <include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+      			<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) + !String.IsEmpty(Window(AddonBrowser).Property(Updated))]</visible>
+    			  <left>633</left>
+    			  <top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+  				  <itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+				      <label>$INFO[Window(AddonBrowser).Property(Updated),$LOCALIZE[31229]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+  			</control>
+
+        <!-- Videos Totals -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),videos) + [Library.HasContent(Movies) | Library.HasContent(TVShows)]] + !Skin.HasSetting(HideExtraInfo) + ![String.IsEmpty(Window(Home).Property(Movies.Count)) | String.IsEmpty(Window(Home).Property(TVShows.Count))]</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>564</top>
+    				<width>490</width>
+  					<height>100</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>98</width>
+	  					<height>100</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultVideo.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>32</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[20342]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>52</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[31002]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+        <!-- Movies Totals -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + Library.HasContent(Movies)] + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Home).Property(Movies.Count))</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-15</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultMovies.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+        <!-- TVShows Totals -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)] + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Home).Property(TVShows.Count))</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultTVShows.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>32</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>52</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[Window(Home).Property(TVShows.UnWatched),$LOCALIZE[16101]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+  			
+        <!-- Music Totals -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)] + !Skin.HasSetting(HideExtraInfo) + ![String.IsEmpty(Window(Home).Property(Music.AlbumsCount)) + String.IsEmpty(Window(Home).Property(Music.SongsCount))]</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>567</top>
+    				<width>490</width>
+  					<height>88</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>92</width>
+	  					<height>88</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultAlbumCover.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>26</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Music.AlbumsCount),$LOCALIZE[132]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>46</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+        <!-- Addons Info -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) + !Skin.HasSetting(HideExtraInfo) + ![Window(Home).Property(SkinHelper.TotalAddons) | String.IsEmpty(Window(Home).Property(SkinHelper.TotalFavourites))]</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultAddon.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>31</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(SkinHelper.TotalAddons),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>51</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(SkinHelper.TotalFavourites),$LOCALIZE[1036]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+        <!-- LiveTV Info -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + !Skin.HasSetting(HideExtraInfo)</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>27</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-10</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultLiveTV.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[PVR.BackendName]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+								<label>$INFO[PVR.BackendChannels,$LOCALIZE[19019]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+        <!-- Weather Info -->
+  			<control type="group">
+  			  <left>42</left>
+    			<top>564</top>
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Weather).Property(Current.Temperature)) + !String.Contains(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+  				<control type="image">
+				    <left>-10</left>
+				    <top>5</top>
+  					<width>82</width>
+  					<height>82</height>
+  					<aspectratio>stretch</aspectratio>
+			      <texture>$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weathericons.outline/,.png]</texture>
+  					<colordiffuse>homeinfo</colordiffuse>
+						<animation type="Conditional" condition="true" loop="true" reversible="false">
+							<effect type="fade" start="0" end="100" time="300" />
+							<effect type="fade" start="100" end="0" delay="20000" time="300" />
+							<effect type="slide" end="0" time="21600" />
+						</animation>
+  				</control>
+					<control type="grouplist">
+						<left>78</left>
+						<top>26</top>
+						<width>590</width>
+						<height>50</height>
+						<itemgap>-2</itemgap>
+						<align>left</align>
+				    <orientation>horizontal</orientation>
+						<animation type="Conditional" condition="true" loop="true" reversible="false">
+							<effect type="fade" start="0" end="100" time="300" />
+							<effect type="fade" start="100" end="0" delay="20000" time="300" />
+							<effect type="slide" end="0" time="21600" />
+						</animation>
+						<control type="label">
+							<height>40</height>
+							<width min="10" max="590">auto</width>
+							<font>FontSize_55</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
+							<textcolor>homeinfo</textcolor>
+						</control>
+						<control type="label">
+							<height>17</height>
+							<width min="10" max="590">auto</width>
+							<font>FontSize_10</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[System.TemperatureUnits]</label>
+							<textcolor>homeinfo</textcolor>
+						</control>
+					  <control type="group">
+	    				<width>590</width>
+	    				<control type="label">
+						    <top>0</top>
+						    <left>15</left>
+	    					<width>590</width>
+	    					<height>20</height>
+							  <align>left</align>
+	    					<font>FontSize_20B</font>
+	  						<label>$INFO[Window(Weather).Property(Current.Location)]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+						    <left>15</left>
+						    <top>23</top>
+	    					<width>590</width>
+	    					<height>20</height>
+							  <align>left</align>
+	    					<font>FontSize_20</font>
+				        <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+					  </control>
+					</control>
+          <!-- Weather Provider Logo -->
+					<control type="image">
+						<width>270</width>
+						<height>90</height>
+  					<colordiffuse>homeinfo</colordiffuse>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+						<animation type="Conditional" condition="true" loop="true" reversible="false">
+							<effect type="fade" start="0" end="100" delay="20300" time="300" />
+							<effect type="fade" start="100" end="0" delay="21300" time="300" />
+						</animation>
+					</control>
+  			</control>
+
+        <!-- Kodi Info -->
+  			<control type="group">
+				  <include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				  <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),settings) + !Skin.HasSetting(HideExtraInfo)</visible>
+          <animation type="Conditional" condition="ControlGroup(21).HasFocus">
+            <effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+            <effect type="fade" start="100" end="0" time="150"/>
+          </animation>
+    			<control type="grouplist">
+	  			  <left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">special://skin/extras/icons/Kodi.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+      			    <top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[System.KernelVersion]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+      			    <top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[System.BuildVersion]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+  		</control>
+
+      <!-- Profile info -->
+			<control type="group">
+  			<top>642</top>
+		    <include>HomeMenu_OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
+	      <include>KaiToastSlideAnimations</include>
+	      <include>ScanSlideAnimations</include>
+		    <visible>!Skin.HasSetting(HideExtraInfo)</visible>
+    	  <animation type="Conditional" reversible="true" condition="Player.HasMedia">
+          <effect type="fade" start="100" end="0" time="450"/>
+    	  </animation>
+			  <control type="image">
+					<left>1183</left>
+					<top>0</top>
+					<width>52</width>
+					<height>52</height>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+		      <texture background="true" fallback="dialogs/profiles/DefaultUser.png" diffuse="dialogs/profiles/profile_diffuse.png">$INFO[System.ProfileThumb]</texture>
+      		<bordersize>3</bordersize>
+			  </control>
+			  <control type="image">
+					<left>1183</left>
+					<top>0</top>
+					<width>52</width>
+					<height>52</height>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+		      <texture background="true">dialogs/busy/panel_busy.png</texture>
+			  </control>
+				<control type="label">
+					<left>725</left>
+					<top>0</top>
+					<height>30</height>
+					<width>450</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>NotificationsFont</font>
+					<textcolor>homeinfo</textcolor>
+			    <label>$INFO[System.ProfileName]</label>
+				</control>
+  			<control type="fadelabel">
+  				<left>725</left>
+  				<top>0</top>
+  				<height>71</height>
+  			  <width>450</width>
+					<font>NotificationsFont</font>
+  				<align>right</align>
+  				<aligny>center</aligny>
+  				<textcolor>homeinfo</textcolor>
+    			<label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(DD)] $INFO[System.Date(MMM)] $INFO[System.Date(YYY)]</label>
+  		    <label>$INFO[System.Uptime,Logged on ]</label>
+          <scroll>false</scroll>
+          <scrollout>false</scrollout>
+          <scrollspeed>100</scrollspeed>
+          <pauseatend>10000</pauseatend>
+  			</control>
+			</control>
+	  </include>	
+	
+	  <!-- ================================================ -->
+	  <!-- ClassicHomeMenu Extra Info & Submenus Indicators -->
+	  <!-- ================================================ -->
+	  
+	<include name="HomeMenuExtraInfoClassic">
+  		<control type="group">
+        <!-- Submenus Indicators -->
+  			<control type="group">
+				<include>HomeMenu_Submenu_HiddenAnimation</include>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus | Control.HasFocus(23)">
+					<effect type="slide" start="0,0" end="0,-50" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+				<control type="wraplist" id="9020">
+					<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetName)) + !Skin.HasSetting(AutoHideHomeWidgets)</visible>
+					<left>0</left>
+					<top>0</top>
+					<height>2</height>
+					<width>2</width>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<autoscroll time="4000">true</autoscroll>
+					<viewtype>list</viewtype>
+					<itemlayout width="2" height="2"/>
+					<focusedlayout width="2" height="2"/>
+					<content>
+						<item id="1">
+							<label></label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="2">
+							<visible>String.Contains(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
+							<label></label>
+							<onclick>noop</onclick>
+						</item>
+					</content>
+				</control>
+    			<control type="grouplist">
+					<centerleft>830</centerleft>
+					<top>480</top>
+    				<width>600</width>
+    				<align>center</align>
+					<itemgap>6</itemgap>
+					<include>HomeMenu_OpenCloseSlideAnimation</include>
+					<include>HomeMenu_ExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(9020).HasFocus(1)</visible>
+    				<orientation>horizontal</orientation>
+    				<control type="image">
+						<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetName))</visible>
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true" flipy="true">$VAR[resourceimgvar]pulse/submenu_arrow.png</texture>
+    					<colordiffuse>icontext</colordiffuse>	
+    				</control>
+    				<control type="label">
+    					<width>490</width>
+    					<height>21</height>
+    					<font>size21</font>
+    					<label>$INFO[Container(9000).ListItem.Property(widgetName),$LOCALIZE[31092]: ]</label>
+    					<textcolor>icontext</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    			</control>
+				
+    			<!-- Home Submenu Arrow -->
+    			<control type="grouplist">
+					<centerleft>830</centerleft>
+					<top>480</top>
+    				<width>600</width>
+    				<align>center</align>
+					<itemgap>6</itemgap>
+					<include>HomeMenu_OpenCloseSlideAnimation</include>
+					<include>HomeMenu_ExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(9020).HasFocus(2)</visible>
+    				<orientation>horizontal</orientation>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">$VAR[resourceimgvar]pulse/submenu_arrow.png</texture>
+    					<colordiffuse>icontext</colordiffuse>
+    				</control>
+    				<control type="label">
+    					<width>490</width>
+    					<height>21</height>
+    					<font>size21</font>
+    					<label>$LOCALIZE[1034]</label>
+    					<textcolor>icontext</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    			</control>
+  			</control>
+
+        <!-- Right Side Extra Info -->
+  			<control type="group">
+				<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<include>HomeMenu_Submenu_HiddenAnimation</include>
+				<visible>!Skin.HasSetting(HideExtraInfo)</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus | Control.HasFocus(23)">
+					<effect type="slide" start="0,0" end="0,-50" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+				<!-- Movies -->
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + Library.HasContent(Movies)]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>size21</font>
+						<label>$INFO[Window(Home).Property(LatestMovie.1.Title),$LOCALIZE[31211]: ]$INFO[Window(Home).Property(LatestMovie.1.Year), (,)]</label>
+    					<textcolor>icontext</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">$VAR[resourceimgvar]pulse/submenu_info.png</texture>
+    					<colordiffuse>icontext</colordiffuse>
+				      <visible>!String.IsEmpty(Window(Home).Property(LatestMovie.1.Title))</visible>
+    				</control>
+    			</control>
+
+				<!-- TVShows -->
+				<control type="wraplist" id="32">
+					<left>0</left>
+					<top>0</top>
+					<height>2</height>
+					<width>2</width>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<autoscroll time="10000">true</autoscroll>
+					<viewtype>list</viewtype>
+					<itemlayout width="2" height="2"/>
+					<focusedlayout width="2" height="2"/>
+					<content>
+						<item id="1">
+							<label></label>
+							<onclick>noop</onclick>
+							<visible>!String.IsEmpty(Window(Home).Property(LatestEpisode.1.EpisodeTitle))</visible>
+						</item>
+						<item id="2">
+							<label></label>
+							<onclick>noop</onclick>
+	    			    <visible>!Integer.IsEqual(Window(Home).Property(NextAired.TodayTotal),0) + Skin.HasSetting(NextAiredEnabled)</visible>
+						</item>
+					</content>
+				</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(32).HasFocus(1) + !String.IsEmpty(Window(Home).Property(LatestEpisode.1.EpisodeTitle))</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>size21</font>
+						<label>$INFO[Window(Home).Property(LatestEpisode.1.ShowTitle),$LOCALIZE[31212]: ,  ]$INFO[Window(Home).Property(LatestEpisode.1.EpisodeSeason)]$INFO[Window(Home).Property(LatestEpisode.1.EpisodeNumber),x,,]</label>
+    					<textcolor>icontext</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(32).HasFocus(2) + !Integer.IsEqual(Window(Home).Property(NextAired.TodayTotal),0)</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$INFO[Window(Home).Property(NextAired.TodayTotal), $LOCALIZE[31240]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+				<!-- Music -->
+				<control type="wraplist" id="33">
+					<left>0</left>
+					<top>0</top>
+					<height>2</height>
+					<width>2</width>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<autoscroll time="10000">true</autoscroll>
+					<viewtype>list</viewtype>
+					<itemlayout width="2" height="2"/>
+					<focusedlayout width="2" height="2"/>
+						<content>
+							<item id="1">
+								<label></label>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(Window(Home).Property(LatestAlbum.1.Title))</visible>
+							</item>
+							<item id="2">
+								<label></label>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(Window(Home).Property(LatestSong.1.Title))</visible>
+							</item>
+						</content>
+				</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(33).HasFocus(1) + !String.IsEmpty(Window(Home).Property(LatestAlbum.1.Title))</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$INFO[Window(Home).Property(LatestAlbum.1.Title),$LOCALIZE[31213]: ,]$INFO[Window(Home).Property(LatestAlbum.1.Artist), - ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(33).HasFocus(2) + !String.IsEmpty(Window(Home).Property(LatestSong.1.Title))</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$INFO[Window(Home).Property(LatestSong.1.Title),$LOCALIZE[31222]: ,]$INFO[Window(Home).Property(LatestSong.1.Artist), - ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+				<!-- Live TV -->
+				<control type="wraplist" id="34">
+					<left>0</left>
+					<top>0</top>
+					<height>2</height>
+					<width>2</width>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<autoscroll time="10000">true</autoscroll>
+					<viewtype>list</viewtype>
+					<itemlayout width="2" height="2"/>
+					<focusedlayout width="2" height="2"/>
+						<content>
+							<item id="1">
+								<label></label>
+								<onclick>noop</onclick>
+								<visible>PVR.IsRecording</visible>
+							</item>
+							<item id="2">
+								<label></label>
+								<onclick>noop</onclick>
+								<visible>PVR.HasNonRecordingTimer</visible>
+							</item>
+						</content>
+				</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(34).HasFocus(1)</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + PVR.IsRecording]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$LOCALIZE[19158]$INFO[PVR.NowRecordingTitle,: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+				      <visible>!String.IsEmpty(PVR.NowRecordingTitle)</visible>
+    				</control>
+    			</control>
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+	    			<visible>Container(34).HasFocus(2)</visible>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + PVR.HasNonRecordingTimer]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<align>right</align>
+    				<height>22</height>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$LOCALIZE[19157]$INFO[PVR.NextRecordingTitle,: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+				      <visible>!String.IsEmpty(PVR.NextRecordingTitle)</visible>
+    				</control>
+    			</control>
+
+				<!-- Weather -->
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Alerts.RSS)) + !String.IsEmpty(Window(Weather).Property(Current.Condition))</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$INFO[Window(Weather).Property(Alerts),$LOCALIZE[33050]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+
+				<!-- Addons -->
+    			<control type="grouplist">
+					<include>HomeMenu_RightExtraInfo_ScrollAnimation</include>
+					<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) + !String.IsEmpty(Window(AddonBrowser).Property(Updated))]</visible>
+					<left>633</left>
+					<top>480</top>
+    				<width>600</width>
+    				<height>22</height>
+    				<align>right</align>
+					<itemgap>6</itemgap>
+    				<orientation>horizontal</orientation>
+    				<control type="label">
+    					<width min="10" max="490">auto</width>
+    					<height>22</height>
+    					<font>FontSize_16B</font>
+						<label>$INFO[Window(AddonBrowser).Property(Updated),$LOCALIZE[31229]: ]</label>
+    					<textcolor>homeinfo</textcolor>
+    					<scroll>false</scroll>
+    				</control>
+    				<control type="image">
+    					<width>22</width>
+    					<height>22</height>
+    					<aspectratio>stretch</aspectratio>
+    					<texture background="true">icons/submenu_info.png</texture>
+    					<colordiffuse>homeinfo</colordiffuse>
+    				</control>
+    			</control>
+  			</control>
+
+			<!-- Videos Totals -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),videos) + [Library.HasContent(Movies) | Library.HasContent(TVShows)]] + !Skin.HasSetting(HideExtraInfo) + ![String.IsEmpty(Window(Home).Property(Movies.Count)) | String.IsEmpty(Window(Home).Property(TVShows.Count))]</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>564</top>
+    				<width>490</width>
+  					<height>100</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>98</width>
+	  					<height>100</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultVideo.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>32</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[20342]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>52</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[31002]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+			<!-- Movies Totals -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + Library.HasContent(Movies)] + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Home).Property(Movies.Count))</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+					<left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-15</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultMovies.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+			<!-- TVShows Totals -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) + Library.HasContent(TVShows)] + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Home).Property(TVShows.Count))</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultTVShows.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>32</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>52</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[Window(Home).Property(TVShows.UnWatched),$LOCALIZE[16101]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+  			
+			<!-- Music Totals -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>[String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)] + !Skin.HasSetting(HideExtraInfo) + ![String.IsEmpty(Window(Home).Property(Music.AlbumsCount)) + String.IsEmpty(Window(Home).Property(Music.SongsCount))]</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+	  			  <left>25</left>
+	    			<top>567</top>
+    				<width>490</width>
+  					<height>88</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>92</width>
+	  					<height>88</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultAlbumCover.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>26</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Music.AlbumsCount),$LOCALIZE[132]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>46</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+			<!-- Addons Info -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+				<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) + !Skin.HasSetting(HideExtraInfo) + ![Window(Home).Property(SkinHelper.TotalAddons) | String.IsEmpty(Window(Home).Property(SkinHelper.TotalFavourites))]</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+	  			  <left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultAddon.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>31</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(SkinHelper.TotalAddons),$LOCALIZE[20161]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>51</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[Window(Home).Property(SkinHelper.TotalFavourites),$LOCALIZE[1036]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+			<!-- LiveTV Info -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + !Skin.HasSetting(HideExtraInfo)</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+	  			  <left>27</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-10</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">DefaultLiveTV.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[PVR.BackendName]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+							<label>$INFO[PVR.BackendChannels,$LOCALIZE[19019]: ]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+			<!-- Weather Info -->
+  			<control type="group">
+				<left>42</left>
+    			<top>564</top>
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) + !Skin.HasSetting(HideExtraInfo) + !String.IsEmpty(Window(Weather).Property(Current.Temperature)) + !String.Contains(Window(Weather).Property(Current.ConditionIcon),na)</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+  				<control type="image">
+				    <left>-10</left>
+				    <top>5</top>
+  					<width>82</width>
+  					<height>82</height>
+  					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weathericons.outline/,.png]</texture>
+  					<colordiffuse>homeinfo</colordiffuse>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+						<effect type="fade" start="100" end="0" delay="20000" time="300" />
+						<effect type="slide" end="0" time="21600" />
+					</animation>
+				</control>
+				<control type="grouplist">
+					<left>78</left>
+					<top>26</top>
+					<width>590</width>
+					<height>50</height>
+					<itemgap>-2</itemgap>
+					<align>left</align>
+				    <orientation>horizontal</orientation>
+					<animation type="Conditional" condition="true" loop="true" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+						<effect type="fade" start="100" end="0" delay="20000" time="300" />
+						<effect type="slide" end="0" time="21600" />
+					</animation>
+					<control type="label">
+						<height>40</height>
+						<width min="10" max="590">auto</width>
+						<font>FontSize_55</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
+						<textcolor>homeinfo</textcolor>
+					</control>
+					<control type="label">
+						<height>17</height>
+						<width min="10" max="590">auto</width>
+						<font>FontSize_10</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[System.TemperatureUnits]</label>
+						<textcolor>homeinfo</textcolor>
+					</control>
+					 <control type="group">
+	    				<width>590</width>
+	    				<control type="label">
+						    <top>0</top>
+						    <left>15</left>
+	    					<width>590</width>
+	    					<height>20</height>
+							<align>left</align>
+	    					<font>FontSize_20B</font>
+	  						<label>$INFO[Window(Weather).Property(Current.Location)]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+						    <left>15</left>
+						    <top>23</top>
+	    					<width>590</width>
+	    					<height>20</height>
+							<align>left</align>
+	    					<font>FontSize_20</font>
+							<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+					  </control>
+					</control>
+					<!-- Weather Provider Logo -->
+					<control type="image">
+						<width>270</width>
+						<height>90</height>
+						<colordiffuse>homeinfo</colordiffuse>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+						<animation type="Conditional" condition="true" loop="true" reversible="false">
+							<effect type="fade" start="0" end="100" delay="20300" time="300" />
+							<effect type="fade" start="100" end="0" delay="21300" time="300" />
+						</animation>
+					</control>
+  			</control>
+
+        <!-- Kodi Info -->
+  			<control type="group">
+				<include>HomeMenu_ExtraInfo_HiddenAnimation</include>
+    			<include>HomeMenu_OpenCloseSlideAnimation</include>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),settings) + !Skin.HasSetting(HideExtraInfo)</visible>
+				<animation type="Conditional" condition="ControlGroup(21).HasFocus">
+					<effect type="slide" start="0,0" end="0,-35" time="200" tween="sine" easing="in"/>
+					<effect type="fade" start="100" end="0" time="150"/>
+				</animation>
+    			<control type="grouplist">
+					<left>22</left>
+	    			<top>562</top>
+    				<width>490</width>
+  					<height>96</height>
+    				<align>left</align>
+    				<itemgap>-12</itemgap>
+    				<orientation>horizontal</orientation>
+	  				<control type="image">
+	  					<width>96</width>
+	  					<height>96</height>
+	  					<aspectratio>stretch</aspectratio>
+	  					<texture background="true">special://skin/extras/icons/Kodi.png</texture>
+	  					<colordiffuse>homeinfo</colordiffuse>
+	  				</control>
+	    			<control type="group">
+	  					<width>490</width>
+	    				<control type="label">
+							<top>30</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[System.KernelVersion]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+	    				<control type="label">
+							<top>50</top>
+	    					<width>490</width>
+	    					<height>15</height>
+	    					<font>FontSize_20</font>
+	  						<label>$INFO[System.BuildVersion]</label>
+	    					<textcolor>homeinfo</textcolor>
+	    					<scroll>false</scroll>
+	    				</control>
+		  			</control>
+    			</control>
+  			</control>
+
+  		</control>
+
+		<!-- Profile info -->
+		<control type="group">
+  			<top>642</top>
+		    <include>HomeMenu_OpenCloseSlideAnimation</include>
+		    <include>VisibleHiddenSlideAnimation</include>
+			<include>KaiToastSlideAnimations</include>
+			<include>ScanSlideAnimations</include>
+		    <visible>!Skin.HasSetting(HideExtraInfo)</visible>
+			<animation type="Conditional" reversible="true" condition="Player.HasMedia">
+				<effect type="fade" start="100" end="0" time="450"/>
+			</animation>
+			 <control type="image">
+				<left>1183</left>
+				<top>0</top>
+				<width>52</width>
+				<height>52</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<texture background="true" fallback="dialogs/profiles/DefaultUser.png" diffuse="dialogs/profiles/profile_diffuse.png">$INFO[System.ProfileThumb]</texture>
+				<bordersize>3</bordersize>
+			</control>
+			<control type="image">
+				<left>1183</left>
+				<top>0</top>
+				<width>52</width>
+				<height>52</height>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<colordiffuse>$VAR[Textures.GlobalColor]</colordiffuse>
+				<texture background="true">dialogs/busy/panel_busy.png</texture>
+			</control>
+			<control type="label">
+				<left>725</left>
+				<top>0</top>
+				<height>30</height>
+				<width>450</width>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>NotificationsFont</font>
+				<textcolor>homeinfo</textcolor>
+			    <label>$INFO[System.ProfileName]</label>
+			</control>
+  			<control type="fadelabel">
+  				<left>725</left>
+  				<top>0</top>
+  				<height>71</height>
+				<width>450</width>
+				<font>NotificationsFont</font>
+  				<align>right</align>
+  				<aligny>center</aligny>
+  				<textcolor>homeinfo</textcolor>
+    			<label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(DD)] $INFO[System.Date(MMM)] $INFO[System.Date(YYY)]</label>
+				<label>$INFO[System.Uptime,Logged on ]</label>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+				<scrollspeed>100</scrollspeed>
+				<pauseatend>10000</pauseatend>
+  			</control>
+		</control>
+	</include>
+	
+	<!-- =================== -->
+	<!-- Wraplist Animations -->
+	<!-- =================== -->	
+
+	<include name="HomeSlideAnimations">
+		<animation type="WindowOpen" reversible="true">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+			<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose" reversible="true">
+			<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+			<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="inout" />
+		</animation>
+		<animation type="Visible" reversible="true">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+			<effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+		</animation>
+		<animation type="Hidden" reversible="true">
+			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+			<effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" />
+		</animation>
+	</include>
+
+	<include name="VisibleHiddenSlideAnimation">
+		<animation type="Visible" reversible="false">
+			<include>CommonVisibleEffect</include>
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<include>CommonHiddenEffect</include>
+		</animation>
+	</include>
+	
+	<include name="HomeMenu_OpenCloseSlideAnimation">
+		<animation type="WindowOpen" reversible="false">
+			<include>CommonVisibleEffect</include>
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<include>CommonHiddenEffectTwo</include>
+		</animation>
+	</include>
+
+	<include name="VisibleHiddenSlideAnimation">
+		<animation type="Visible" reversible="false">
+			<include>CommonVisibleEffect</include>
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<include>CommonHiddenEffect</include>
+		</animation>
+	</include>
+
+	<include name="HomeMenu_Submenu_HiddenAnimation">
+		<animation type="Conditional" condition="ControlGroup(22).HasFocus">
+			<effect type="slide" start="0,0" end="0,75" time="300" tween="sine" easing="in"/>
+			<effect type="fade" start="100" end="0" time="200" tween="sine" easing="in"/>
+		</animation>
+	</include>		    
+	
+	<include name="HomeMenu_RightExtraInfo_ScrollAnimation">
+		<!--visible>!Container(20).Scrolling + !Container(20).OnScrollNext + !Container(20).OnScrollPrevious + !Container(20).OnNext + !Container(20).OnPrevious</visible-->
+		<visible>!Container(9000).Scrolling + !Container(9000).OnScrollNext + !Container(9000).OnScrollPrevious + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
+		<animation type="Visible" reversible="false">
+			<effect type="zoom" start="70" end="100" center="1220,480" delay="100" easing="out" tween="quadratic" time="250" />
+			<effect type="fade" start="0" end="100" time="200" delay="100" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="zoom" start="100" end="70" center="1220,480" easing="in" tween="quadratic" time="250" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="CommonVisibleEffect">
+      <effect type="slide" start="0,AnimationsSlide" end="0,0" time="AnimationsSlideTime" tween="quadratic" easing="out"/>
+      <effect type="fade" start="0" end="100" time="AnimationsFadeTime"/>
+	</include>
+	
+	<include name="CommonVisibleEffectTwo">
+      <effect type="slide" start="0,AnimationsSlide" end="0,0" time="AnimationsSlideTime" delay="AnimationsDelayTime" tween="quadratic" easing="out"/>
+      <effect type="fade" start="0" end="100" time="AnimationsFadeTime" delay="AnimationsDelayTime"/>
+	</include>
+	
+	<include name="CommonHiddenEffect">
+      <effect type="slide" start="0,0" end="0,AnimationsSlide" time="AnimationsSlideTime" tween="quadratic" easing="out"/>
+      <effect type="fade" start="100" end="0" time="AnimationsFadeTime"/>
+	</include>
+	
+	<include name="CommonHiddenEffectTwo">
+      <effect type="slide" start="0,0" end="0,AnimationsSlide" time="AnimationsSlideTime" delay="AnimationsDelayTime" tween="quadratic" easing="out"/>
+      <effect type="fade" start="100" end="0" time="AnimationsFadeTime" delay="AnimationsDelayTime"/>
+	</include>	
+		
+</includes>

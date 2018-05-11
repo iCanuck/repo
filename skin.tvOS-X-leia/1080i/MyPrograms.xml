@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <backgroundcolor>background</backgroundcolor>
+	<!--defaultcontrol always="true">53</defaultcontrol-->
+	<include condition="![Skin.HasSetting(View50list)|Skin.HasSetting(View53icon)|Skin.HasSetting(View55banner)|Skin.HasSetting(View500fanart)|Skin.HasSetting(View501widelist)|Skin.HasSetting(CBmode)]">widelistdefaultcontrol</include>
+	<include condition="Skin.HasSetting(View50list)">biglistdefaultcontrol</include>
+	<include condition="Skin.HasSetting(View53icon)">icondefaultcontrol</include>
+	<include condition="Skin.HasSetting(View55banner)">bannerdefaultcontrol</include>
+	<include condition="Skin.HasSetting(View500fanart)">fanartdefaultcontrol</include>	
+	<include condition="Skin.HasSetting(View501widelist)">widelistdefaultcontrol</include>
+	<!--include condition="Skin.HasSetting(CBmode)">cboxdefaultcontrol</include-->
+	<include condition="Skin.HasSetting(CBmode)">biglistdefaultcontrol</include>
+    <allowoverlay>no</allowoverlay>
+    <!--views>50,53,55,501</views-->
+	<include condition="![Skin.HasSetting(View50list)|Skin.HasSetting(View53icon)|Skin.HasSetting(View55banner)|Skin.HasSetting(View500fanart)|Skin.HasSetting(View501widelist)|Skin.HasSetting(CBmode)]">defaultviewbiglist</include>
+	<include condition="Skin.HasSetting(View50list)">defaultviewbiglist</include>
+	<include condition="Skin.HasSetting(View53icon)">defaultviewicon</include>
+	<include condition="Skin.HasSetting(View55banner)">defaultviewbanner</include>
+	<include condition="Skin.HasSetting(View500fanart)">defaultviewfanart</include>	
+	<!--include condition="Skin.HasSetting(View501widelist)">defaultviewwidelist</include>	
+	<include condition="Skin.HasSetting(CBmode)">defaultviewcbox</include-->
+	<include condition="Skin.HasSetting(CBmode)">defaultviewbiglist</include>	
+    <include>OpenClose</include>
+    <controls>
+        <include>OtherBackground</include>
+		<include>FanartBackground</include>
+		<include>Clock</include>		
+        <control type="label" description="Heading">
+            <visible>!Control.IsVisible(53)</visible>
+			<visible>!Control.IsVisible(77)</visible>
+			<visible>!Control.IsVisible(500)</visible>
+            <include>Heading</include>
+            <label>$VAR[RootLabel][COLOR=dimgray]$INFO[Container.NumItems,  (,)][/COLOR]</label>
+        </control>
+        <!--VIEWS-->
+        <include>biglist</include>
+        <include>icons</include>
+        <!--include>banners</include>
+		<include>fanart</include>
+        <include>widelist</include-->
+		<include condition="Skin.HasSetting(CBmode)">cboxview</include>
+        <!--VIEWS-->
+        <control type="group" description="Side menu 9000 group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>DialogOpenCloseVisible</include>
+			
+			<control type="image" description="List back border">
+			  <centerleft>960</centerleft>
+			  <centertop>540</centertop>
+			  <width>738</width>
+			  <height>432</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture>$VAR[BorderColor]</texture>	  
+			</control>	
+			<control type="image" description="List back">
+				<centerleft>960</centerleft>
+				<centertop>540</centertop>
+				<width>802</width>
+				<height>500</height>
+				<aspectratio>stretch</aspectratio>
+				<include condition="String.IsEmpty(Skin.String(CustomBgDialog)) + String.IsEmpty(Skin.String(CustomBgHome)) + ![Skin.HasTheme(Dark)|Skin.HasTheme(White)]">DialogTexture</include>
+				<include condition="!String.IsEmpty(Skin.String(CustomBgDialog)) | !String.IsEmpty(Skin.String(CustomBgHome)) | Skin.HasTheme(Dark) | Skin.HasTheme(White)">DialogTextureBG</include>	
+			</control>	
+			<control type="image" description="List back diffuse">
+				<centerleft>960</centerleft>
+				<centertop>540</centertop>
+				<width>802</width>
+				<height>500</height>
+				<aspectratio>stretch</aspectratio>
+				<texture border="50" colordiffuse="$VAR[diffusedialog]" diffuse="images/DialogDiffuse.png">images/whitebg.png</texture>
+			</control>  
+			
+<!--			
+            <control type="image" description="List back">
+                <centerleft>960</centerleft>
+                <centertop>540</centertop>
+                <width>802</width>
+                <height>906</height>
+                <aspectratio>stretch</aspectratio>
+                <texture border="50">$VAR[ContextMenu]</texture>
+                <!--colordiffuse>dialog</colordiffuse>
+            </control>
+-->			
+            <control type="grouplist" id="9000">
+                <height>528</height>
+                <align>center</align>
+                <include>DialogGLs</include>
+				<control type="button" id="2" description="Views">
+				  <include>DialogButt</include>
+				</control>
+				<control type="button" id="3" description="Sort">
+				  <include>DialogButt</include>
+				</control>
+				<control type="togglebutton" id="4" description="SortMode">
+				  <alttexturenofocus></alttexturenofocus>
+				  <include>DialogButt</include>
+				  <label>$LOCALIZE[21430]</label>
+				  <altlabel>$LOCALIZE[21431]</altlabel>
+				</control>				
+            </control>
+        </control>
+        <include>WindowsTopInfos</include>
+    </controls>
+</window>

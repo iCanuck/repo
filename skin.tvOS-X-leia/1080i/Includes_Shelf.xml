@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="ShelfFade">
+        <animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+    </include>
+    <include name="PosterShortcutsCommons">
+        <include>ShelfFade</include>
+        <animation effect="slide" end="-100,0" time="250" condition="Container(311).Column(4) | Container(320).Column(4) | Container(321).Column(4)">Conditional</animation>
+        <top>90</top>
+        <width>2030</width>
+        <height>630</height>
+        <onup condition="[String.IsEmpty(Container(9010).ListItem.Property(list))|Library.HasContent(Video)] + Skin.HasSetting(shelfmenu)">9009</onup>		
+        <onup condition="[String.IsEmpty(Container(9010).ListItem.Property(list))|Library.HasContent(Video)] + !Skin.HasSetting(shelfmenu)">9010</onup>
+        <ondown>9000</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <orientation>horizontal</orientation>
+        <scrolltime>400</scrolltime>		
+		<!--onclick condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)">Info</onclick-->
+        <!--onclick condition="$EXP[isupcomingmovies]">Contextmenu</onclick-->
+        <itemlayout height="600" width="382">
+            <control type="image">
+                <left>90</left>
+                <top>35</top>
+                <width>335</width>
+                <height>500</height>
+                <texture background="true" fallback="DefaultVideoCover.png">$VAR[locandine]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image" description="WatchStatus">
+                <left>373</left>
+                <bottom>65</bottom>
+                <height>52</height>
+                <width>52</width>
+                <aspectratio>keep</aspectratio>
+                <texture>$VAR[WatchStatus]</texture>
+            </control>
+        </itemlayout>
+        <focusedlayout height="600" width="392">
+            <control type="group">
+                <animation effect="zoom" start="100" end="112" time="120" center="257,300" tween="Back" easing="Out">Focus</animation>
+                <animation effect="zoom" start="112" end="100" time="120" center="257,300">unFocus</animation>
+                <control type="image">
+                    <animation effect="fade" start="0" end="100" time="150">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="150">unFocus</animation>
+                    <left>40</left>
+                    <top>61</top>
+                    <width>455</width>
+                    <height>580</height>
+                    <texture>shadow.png</texture>
+                </control>
+                <control type="image">
+                    <left>90</left>
+                    <top>35</top>
+                    <width>335</width>
+                    <height>500</height>
+                    <texture background="true" fallback="DefaultVideoCover.png">$VAR[locandine]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="image" description="WatchStatus">
+                    <left>373</left>
+                    <bottom>65</bottom>
+                    <height>52</height>
+                    <width>52</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$VAR[WatchStatus]</texture>
+                </control>
+            </control>
+            <control type="group" description="labels">
+                <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+                <animation effect="fade" start="100" end="0" time="200">unFocus</animation>
+                <control type="label">
+                    <visible>ControlGroup(700).HasFocus()</visible>
+                    <centerleft>257</centerleft>
+                    <top>570</top>
+                    <width>700</width>
+                    <height>40</height>
+                    <font>size30B</font>
+                    <!--<autoscroll>false</autoscroll>-->
+                    <label>$INFO[ListItem.Title]</label>
+                    <align>center</align>
+                </control>
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="EpisodeShortcutsCommons">
+        <include>ShelfFade</include>
+        <top>110</top>
+        <width>1920</width>
+        <height>610</height>
+        <onup condition="!String.IsEmpty(Container(9010).ListItem.Property(list))">noop</onup>		
+        <onup condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + Skin.HasSetting(shelfmenu)">9009</onup>		
+        <onup condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + !Skin.HasSetting(shelfmenu)">9010</onup>
+        <ondown>9000</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <orientation>horizontal</orientation>
+        <scrolltime>400</scrolltime>
+        <itemlayout height="610" width="840">
+            <control type="image">
+                <visible>!Skin.HasSetting(epthumb)</visible>
+                <left>80</left>
+                <top>45</top>
+                <width>790</width>
+                <height>450</height>
+                <texture background="true" fallback="images/epfallback.png" diffuse="images/epdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="image">
+                <visible>Skin.HasSetting(epthumb)</visible>
+                <left>80</left>
+                <top>45</top>
+                <width>790</width>
+                <height>450</height>
+                <texture background="true" fallback="images/epfallback.png" diffuse="images/epdiffuse.png">$INFO[ListItem.Art(fanart)]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="progress" description="progress">
+                <visible>ListItem.IsResumable</visible>
+                <centerleft>475</centerleft>
+                <top>450</top>
+                <width>710</width>
+                <height>8</height>
+                <texturebg>Seekbar/ProgressBG.png</texturebg>
+                <lefttexture border="4">Seekbar/ProgressL.png</lefttexture>
+                <midtexture border="4">Seekbar/ProgressM.png</midtexture>
+                <righttexture border="4">Seekbar/ProgressR.png</righttexture>
+                <info>ListItem.PercentPlayed</info>
+            </control>
+            <control type="label">
+                <centerleft>475</centerleft>
+                <top>500</top>
+                <width>790</width>
+                <height>40</height>
+                <font>size30B</font>
+                <scroll>false</scroll>
+                <textcolor>dimgray</textcolor>
+                <label>$INFO[ListItem.TVShowTitle]</label>
+                <align>center</align>
+            </control>
+            <!--control type="label">
+                <visible>!ListItem.IsResumable + Integer.IsEqual(ListItem.PlayCount,0)</visible>
+                <top>400</top>
+                <left>118</left>
+                <width>335</width>
+                <height>30</height>
+                <font>size30B</font>
+                <textcolor>white</textcolor>
+                <label>New Episode</label>
+                <align>left</align>
+            </control-->
+            <control type="label">
+                <visible>!ListItem.IsResumable</visible>
+                <top>434</top>
+                <left>119</left>
+                <width>335</width>
+                <height>30</height>
+                <font>size33</font>
+                <textcolor>white</textcolor>
+                <label>$LOCALIZE[20373]$INFO[ListItem.Season],$LOCALIZE[20359]$INFO[ListItem.Episode]</label>
+                <align>left</align>
+            </control>
+            <control type="image" description="Studio">
+                <centerleft>806</centerleft>
+                <top>60</top>
+                <width>70</width>
+                <height>60</height>
+                <texture colordiffuse="white">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+            <!--control type="image" description="WatchStatus">
+                <centerleft>806</centerleft>
+                <top>60</top>
+                <height>52</height>
+                <width>52</width>
+                <aspectratio>keep</aspectratio>
+                <texture>$VAR[WatchStatus]</texture>
+            </control-->			
+        </itemlayout>
+        <focusedlayout height="610" width="840">
+            <control type="group">
+                <animation effect="zoom" start="100" end="110" time="120" center="auto" tween="Back" easing="Out">Focus</animation>
+                <animation effect="zoom" start="110" end="100" time="120" center="auto">unFocus</animation>
+                <control type="image" description="shadow">
+                    <animation effect="fade" start="0" end="100" time="150">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="150">unFocus</animation>
+                    <left>80</left>
+                    <top>45</top>
+                    <width>790</width>
+                    <height>520</height>
+                    <texture>shadow.png</texture>
+                </control>
+                <control type="image">
+                    <visible>!Skin.HasSetting(epthumb)</visible>
+                    <left>80</left>
+                    <top>45</top>
+                    <width>790</width>
+                    <height>450</height>
+                    <texture background="true" fallback="images/epfallback.png" diffuse="images/epdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>Skin.HasSetting(epthumb)</visible>
+                    <left>80</left>
+                    <top>45</top>
+                    <width>790</width>
+                    <height>450</height>
+                    <texture background="true" fallback="images/epfallback.png" diffuse="images/epdiffuse.png">$INFO[ListItem.Art(fanart)]</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+                <control type="progress" description="progress">
+                    <visible>ListItem.IsResumable</visible>
+                    <centerleft>475</centerleft>
+                    <top>450</top>
+                    <width>710</width>
+                    <height>8</height>
+                    <texturebg>Seekbar/ProgressBG.png</texturebg>
+                    <lefttexture border="4">Seekbar/ProgressL.png</lefttexture>
+                    <midtexture border="4">Seekbar/ProgressM.png</midtexture>
+                    <righttexture border="4">Seekbar/ProgressR.png</righttexture>
+                    <info>ListItem.PercentPlayed</info>
+                </control>
+                <control type="label">
+                    <centerleft>475</centerleft>
+                    <top>500</top>
+                    <width>790</width>
+                    <height>40</height>
+                    <font>size30B</font>
+                    <scroll>false</scroll>
+                    <label>$INFO[ListItem.TVShowTitle]</label>
+                    <align>center</align>
+                </control>
+                <!--control type="label">
+                    <visible>!ListItem.IsResumable</visible>
+                    <top>400</top>
+                    <left>118</left>
+                    <width>335</width>
+                    <height>30</height>
+                    <font>size30B</font>
+                    <label>New Episode</label>
+                    <align>left</align>
+                </control-->
+                <control type="label">
+                    <visible>!ListItem.IsResumable</visible>
+                    <top>434</top>
+                    <left>119</left>
+                    <width>335</width>
+                    <height>30</height>
+                    <font>size33</font>
+                    <label>$LOCALIZE[20373]$INFO[ListItem.Season],$LOCALIZE[20359]$INFO[ListItem.Episode]</label>
+                    <align>left</align>
+                </control>
+                <control type="image" description="Studio">
+                    <centerleft>806</centerleft>
+                    <top>60</top>
+                    <width>70</width>
+                    <height>60</height>
+                    <texture colordiffuse="white">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+				<!--control type="image" description="WatchStatus">
+					<centerleft>806</centerleft>
+					<top>60</top>
+					<height>52</height>
+					<width>52</width>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[WatchStatus]</texture>
+				</control-->				
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="SquareShortcutsCommons">
+        <include>ShelfFade</include>
+        <top>90</top>
+        <width>1920</width>
+        <height>630</height>
+        <onup condition="!String.IsEmpty(Container(9010).ListItem.Property(list))">noop</onup>		
+        <onup condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + Skin.HasSetting(shelfmenu)">9009</onup>		
+        <onup condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + !Skin.HasSetting(shelfmenu)">9010</onup>			
+        <ondown>9000</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <orientation>horizontal</orientation>
+        <scrolltime>400</scrolltime>
+		<!--onclick condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),addons)">Action(Enter)</onclick-->
+        <itemlayout height="600" width="550">
+            <control type="image">
+                <left>90</left>
+                <top>35</top>
+                <width>500</width>
+                <height>500</height>
+                <texture fallback="DefaultAlbumcover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+        </itemlayout>
+        <focusedlayout height="600" width="500">
+            <control type="group">
+                <animation effect="zoom" start="100" end="110" time="120" center="auto" tween="Back" easing="Out">Focus</animation>
+                <animation effect="zoom" start="110" end="100" time="120" center="auto" easing="">unFocus</animation>
+                <control type="image">
+                    <animation effect="fade" start="0" end="100" time="150">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="150">unFocus</animation>
+                    <left>40</left>
+                    <top>66</top>
+                    <width>630</width>
+                    <height>540</height>
+                    <texture>shadow.png</texture>
+                </control>
+                <control type="image">
+                    <left>90</left>
+                    <top>35</top>
+                    <width>500</width>
+                    <height>500</height>
+                    <texture fallback="DefaultAlbumcover.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+            </control>
+            <control type="textbox">
+                <visible>ControlGroup(700).HasFocus()</visible>
+                <animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+                <animation effect="fade" start="100" end="0" time="80">unFocus</animation>
+                <centerleft>345</centerleft>
+                <top>560</top>
+                <width>540</width>
+                <height>150</height>
+                <font>size26</font>
+                <align>center</align>
+                <label>$INFO[ListItem.Label]$INFO[ListItem.Label2,[CR]]</label>
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="ListShortcutsCommons">
+        <include>ShelfFade</include>
+        <top>70</top>
+		<left>960</left>
+        <width>960</width>
+        <height>630</height>		
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + Skin.HasSetting(shelfmenu)">9009</onleft>		
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + !Skin.HasSetting(shelfmenu)">9010</onleft>				
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list))">9000</onleft>
+        <!--ondown>noop</ondown-->
+        <onright>9000</onright>
+        <scrolltime>200</scrolltime>
+        <onclick condition="$EXP[isupcomingmovies]">Contextmenu</onclick>
+		<itemlayout width="1920" height="106">
+			<control type="label" description="Main Label">
+				<!--animation condition="ListItem.IsFolder" effect="slide" end="0,20" time="0" reversible="true">Conditional</animation-->
+				<left>65</left>
+				<width>802</width>
+				<height>106</height>				
+				<height>40</height>
+				<width>720</width>
+				<textcolor>darktext</textcolor>
+				<aligny>center</aligny>
+				<font>size36</font>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<!--control type="image">
+				<left>15</left>
+				<width>40</width>
+				<height>106</height>
+				<texture>$VAR[WatchStatus,overlay/]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>darktext</colordiffuse>
+			</control-->
+		</itemlayout>
+		<focusedlayout width="1920" height="106">
+			<control type="image">
+				<animation effect="fade" end="70" condition="Control.HasFocus(5000)" reversible="false">Conditional</animation>
+				<width>805</width>
+				<height>106</height>
+				<texture border="8">images/White.png</texture>
+			</control>
+			<control type="label" description="Main Label">
+				<animation condition="ListItem.IsFolder" effect="slide" end="0,20" time="0" reversible="true">Conditional</animation>
+				<left>65</left>
+				<width>802</width>
+				<height>106</height>
+				<height>40</height>
+				<width>720</width>
+				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<font>size36</font>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<!--control type="image">
+				<left>15</left>
+				<width>40</width>
+				<height>106</height>
+				<texture>$VAR[WatchStatus,overlay/]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>black</colordiffuse>
+			</control-->
+		</focusedlayout>			
+    </include>
+    <include name="BannerShortcutsCommons">	
+        <include>ShelfFade</include>
+        <top>70</top>
+		<left>531</left>
+        <width>1920</width>
+        <height>649</height>
+		<focusposition>1</focusposition>
+        <!--preloaditems>2</preloaditems-->
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + Skin.HasSetting(shelfmenu)">9009</onleft>		
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list)) + !Skin.HasSetting(shelfmenu)">9010</onleft>				
+        <onleft condition="String.IsEmpty(Container(9010).ListItem.Property(list))">9000</onleft>
+        <!--ondown>noop</ondown-->
+        <onright>9000</onright>
+        <scrolltime>200</scrolltime>
+        <onclick condition="$EXP[isupcomingmovies]">Contextmenu</onclick>
+		<itemlayout height="180" width="1920">
+			<control type="group">
+				<control type="image">
+					<visible>ListItem.IsParentFolder</visible>
+					<left>50</left>
+					<top>80</top>
+					<width>758</width>
+					<height>140</height>
+					<texture background="true" diffuse="images/DiffuseBanner.png">DefaultFolderBackBanner.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>!ListItem.IsParentFolder</visible>
+					<left>50</left>
+					<top>80</top>
+					<width>758</width>
+					<height>140</height>
+					<texture background="true" diffuse="images/DiffuseBanner.png" fallback="images/DiffuseBanner.png">$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>	
+			</control>					
+		</itemlayout>		
+		<focusedlayout height="180" width="1920">
+			<control type="group">
+				<animation effect="zoom" end="140" center="409,150" time="350" tween="Back" easing="Out">Focus</animation>
+				<animation effect="zoom" start="140" end="100" center="409,150" time="250">Unfocus</animation>
+				<control type="image">
+					<animation effect="fade" start="0" end="100" time="150">Focus</animation>
+					<animation effect="fade" start="100" end="0" time="150">unFocus</animation>
+					<visible>!ListItem.IsParentFolder</visible>
+					<left>39</left>
+					<top>80</top>
+					<width>780</width>
+					<height>200</height>
+					<texture>shadow.png</texture>
+				</control>
+				<control type="image">
+					<visible>ListItem.IsParentFolder</visible>
+					<left>50</left>
+					<top>80</top>
+					<width>758</width>
+					<height>140</height>
+					<texture background="true" diffuse="images/DiffuseBanner.png">DefaultFolderBackBanner.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>!ListItem.IsParentFolder</visible>
+					<left>50</left>
+					<top>80</top>
+					<width>758</width>
+					<height>140</height>
+					<texture background="true" fallback="images/DiffuseBanner.png" diffuse="images/DiffuseBanner.png">$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>		
+			</control>
+		</focusedlayout>		
+	</include>
+    <include name="Movies">
+        <control type="panel" id="311" description="Movies Shelf Shortcuts">
+			<visible>$EXP[311visibility]</visible>
+            <include>PosterShortcutsCommons</include>
+            <content target="videos" limit="50">$VAR[movieshelf]</content>
+			<!--content target="$INFO[Container(9000).ListItem.Property(widgetTarget)]">$INFO[Container(9000).ListItem.Property(widgetPath)]</content-->
+        </control>
+    </include>
+    <include name="Music">
+        <control type="panel" id="312" description="Music Shelf Shortcuts">
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
+            <include>SquareShortcutsCommons</include>
+            <onclick>PlayMedia($ESCINFO[ListItem.DBID,musicdb://albums/,/])</onclick>
+            <content target="audio">$VAR[musicshelf]</content>
+        </control>
+    </include>
+    <include name="Episodes">
+        <control type="panel" id="313" description="Episodes Shelf Shortcuts">
+			<visible>$EXP[313visibility]</visible>
+            <include>EpisodeShortcutsCommons</include>
+            <content target="videos" limit="16">$VAR[epshelf]</content>
+        </control>
+    </include>
+    <include name="Livetv">
+        <control type="panel" id="314" description="LiveTV">
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv)</visible>
+            <include>PosterShortcutsCommons</include>
+            <!--<content target="video">$VAR[livetv]</content>-->
+            <content target="videos">pvr://channels/tv/*</content>
+        </control>
+    </include>
+    <include name="Addons">
+        <control type="panel" id="317" description="Addons Shelf Shortcuts">
+			<visible>$EXP[317visibility]</visible>
+            <!--visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.Property(defaultID),programs)</visible-->
+            <include>SquareShortcutsCommons</include>
+            <!--content target="programs">$VAR[squareshelf]</content-->
+			<content target="videos">$VAR[squareshelf]</content>
+        </control>
+    </include>
+    <include name="Favourites">
+        <control type="panel" id="318" description="Favourites">
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),favourites)</visible>
+            <include>PosterShortcutsCommons</include>
+            <content>favourites://</content>
+        </control>
+    </include>
+    <include name="General" description="General Shelf Shortcuts">
+		<control type="group">	
+			<visible>!Control.IsVisible(321)</visible>
+			<control type="panel" id="320" description="Default Shortcuts">
+				<visible>$EXP[320visibility]</visible>	
+				<visible>![String.IsEqual(Container(9000).ListItem.Property(viewtype),Posters)|String.IsEqual(Container(9000).ListItem.Property(viewtype),Squares)|String.IsEqual(Container(9000).ListItem.Property(viewtype),Episodes)|String.IsEqual(Container(9000).ListItem.Property(viewtype),List)|String.IsEqual(Container(9000).ListItem.Property(viewtype),Banner)]</visible>			<!--visible>![String.IsEqual(Container(9000).ListItem.Property(viewtype),Posters)+String.IsEqual(Container(9000).ListItem.Property(viewtype),Squares)+String.IsEqual(Container(9000).ListItem.Property(viewtype),Episodes)] | String.IsEqual(Container(9000).ListItem.Property(viewtype),none)</visible-->			
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright>
+				<include>PosterShortcutsCommons</include>			
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>	
+			<control type="panel" id="320" description="Poster Shortcuts">
+				<visible>$EXP[320visibility]</visible>	
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),Posters)</visible>			
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright>
+				<include>PosterShortcutsCommons</include>			
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>
+			<control type="panel" id="320" description="Squares Shortcuts">
+				<visible>$EXP[320visibility]</visible>		
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),Squares)</visible>
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright>			
+				<include>SquareShortcutsCommons</include>
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>
+			<control type="panel" id="320" description="Episodes Shortcuts">
+				<visible>$EXP[320visibility]</visible>		
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),Episodes)</visible>
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright>			
+				<include>EpisodeShortcutsCommons</include>
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>
+			<control type="panel" id="320" description="List Shortcuts">
+				<visible>$EXP[320visibility]</visible>		
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),List)</visible>
+				<!--onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright-->			
+				<include>ListShortcutsCommons</include>
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>	
+			<control type="group" description="List Poster">
+				<!--visible>$EXP[320visibility]</visible-->		
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),List)</visible>		
+				<animation effect="fade" delay="100" time="300">Visible</animation>
+				<animation effect="fade" time="0">Hidden</animation>
+				<control type="image" description="Poster">
+					<centerleft>640</centerleft>
+					<centertop>374</centertop>
+					<width>335</width>
+					<height>500</height>
+					<include>Icon_Fade</include>
+					<texture background="true">$INFO[Container(320).ListItem.Icon]</texture><!-- todo - set as variable?? -->
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>		
+			</control>
+			<control type="fixedlist" id="320" description="Banner Shortcuts">
+				<visible>$EXP[320visibility]</visible>		
+				<visible>String.IsEqual(Container(9000).ListItem.Property(viewtype),Banner)</visible>
+				<!--onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>320</onleft>
+				<onright>320</onright-->			
+				<include>BannerShortcutsCommons</include>
+				<content>$INFO[Container(9000).ListItem.Property(list)]</content>	
+			</control>			
+		</control>
+    </include>
+    <include name="ShelfMenu">
+		<control type="group">	
+			<visible>[![Control.HasFocus(311) | Control.HasFocus(313) | Control.IsVisible(320)]] + !Skin.HasSetting(shelfmenu)</visible>	
+			<control type="panel" id="321" description="Default Shortcuts">
+				<visible>$EXP[321visibility]</visible>	
+				<visible>![String.IsEqual(Container(9010).ListItem.Property(viewtype),Posters)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Squares)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Episodes)|String.IsEqual(Container(9010).ListItem.Property(viewtype),List)|String.IsEqual(Container(9000).ListItem.Property(defaultID),episodes)|String.IsEqual(Container(9010).ListItem.Property(defaultID),tvprogress)|String.IsEqual(Container(9010).ListItem.Property(defaultID),tvepisodes)|String.IsEqual(Container(9010).ListItem.Property(defaultID),tvhistory)]</visible>			<!--visible>![String.IsEqual(Container(9010).ListItem.Property(viewtype),Posters)+String.IsEqual(Container(9010).ListItem.Property(viewtype),Squares)+String.IsEqual(Container(9010).ListItem.Property(viewtype),Episodes)] | String.IsEqual(Container(9010).ListItem.Property(viewtype),none)</visible-->			
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>
+				<include>PosterShortcutsCommons</include>			
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control>	
+			<control type="panel" id="321" description="Poster Shortcuts">
+				<visible>$EXP[321visibility]</visible>	
+				<visible>String.IsEqual(Container(9010).ListItem.Property(viewtype),Posters)</visible>			
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>
+				<include>PosterShortcutsCommons</include>			
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control>
+			<control type="panel" id="321" description="Squares Shortcuts">
+				<visible>$EXP[321visibility]</visible>		
+				<visible>String.IsEqual(Container(9010).ListItem.Property(viewtype),Squares)</visible>
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>			
+				<include>SquareShortcutsCommons</include>
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control>
+			<control type="panel" id="321" description="Episodes Shortcuts">
+				<visible>$EXP[321visibility]</visible>		
+				<visible>String.IsEqual(Container(9010).ListItem.Property(viewtype),Episodes) | [![String.IsEqual(Container(9010).ListItem.Property(viewtype),Posters)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Squares)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Episodes)|String.IsEqual(Container(9010).ListItem.Property(viewtype),List)] + String.IsEqual(Container(9000).ListItem.Property(defaultID),episodes)] | [![String.IsEqual(Container(9010).ListItem.Property(viewtype),Posters)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Squares)|String.IsEqual(Container(9010).ListItem.Property(viewtype),Episodes)|String.IsEqual(Container(9010).ListItem.Property(viewtype),List)] + String.IsEqual(Container(9010).ListItem.Property(defaultID),tvprogress)|String.IsEqual(Container(9010).ListItem.Property(defaultID),tvepisodes)|String.IsEqual(Container(9010).ListItem.Property(defaultID),tvhistory)]</visible>
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>			
+				<include>EpisodeShortcutsCommons</include>
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control>
+			<control type="group" description="List Poster">
+				<!--visible>$EXP[321visibility]</visible-->		
+				<visible>String.IsEqual(Container(9010).ListItem.Property(viewtype),List)</visible>		
+				<animation effect="fade" delay="100" time="300">Visible</animation>
+				<animation effect="fade" time="0">Hidden</animation>
+				<control type="image" description="Poster">
+					<centerleft>640</centerleft>
+					<centertop>374</centertop>
+					<width>335</width>
+					<height>500</height>
+					<include>Icon_Fade</include>
+					<texture background="true">$INFO[Container(321).ListItem.Icon]</texture><!-- todo - set as variable?? -->
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>
+			</control>
+			<control type="panel" id="321" description="Episodes Shortcuts">
+				<visible>$EXP[321visibility]</visible>		
+				<visible>String.IsEqual(Container(9010).ListItem.Property(viewtype),Banner)</visible>
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>			
+				<include>BannerShortcutsCommons</include>
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control>			
+			<!--control type="panel" id="321" description="TOP Shortcuts">
+				<visible>$EXP[321visibility]</visible>						
+				<onup>9010</onup>
+				<ondown>9000</ondown>
+				<onleft>321</onleft>
+				<onright>321</onright>
+				<include>PosterShortcutsCommons</include>
+				<content>$INFO[Container(9010).ListItem.Property(list)]</content>	
+			</control-->
+		</control>
+    </include>	
+    <!--todo appstore shelf-->
+    <include name="appstore_shelf">
+        <control type="group">
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),programs)</visible>
+            <!--<control type="image">-->
+            <!--<width>1920</width>-->
+            <!--<height>720</height>-->
+            <!--<aspectratio align="top">scale</aspectratio>-->
+            <!--<texture background="true">images/black.png</texture>-->
+            <!--</control>-->
+            <control type="panel" id="314" description="TOP Shortcuts">
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>314</onleft>
+                <onright>314</onright>
+                <include>SquareShortcutsCommons</include>
+                <content></content>
+            </control>
+        </control>
+    </include>
+    <include name="weather_shelf">
+        <control type="group">
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)</visible>
+			<animation effect="fade" start="0" end="100" time="300" condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)">Conditional</animation>			
+			<!--animation effect="fade" start="100" end="0" time="300" condition="!String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)">Conditional</animation-->			
+            <!--<control type="multiimage">-->
+            <!--<width>1920</width>-->
+            <!--<height>720</height>-->
+            <!--<aspectratio align="top">scale</aspectratio>-->
+            <!--<imagepath>weather</imagepath>-->
+            <!--<timeperimage>2000</timeperimage>-->
+            <!--</control>-->
+            <control type="label">
+                <left>83</left>
+                <top>100</top>
+                <width>1754</width>
+                <height>40</height>
+                <align>center</align>
+                <font>shelf</font>
+                <shadowcolor>dimgray</shadowcolor>
+                <label>$INFO[Weather.Location]</label>
+            </control>
+            <control type="list" id="414" description="TOP Weather">
+                <onup>noop</onup>
+                <ondown>9000</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <orientation>horizontal</orientation>
+                <left>85</left>
+                <top>200</top>
+                <width>1760</width>
+                <height>418</height>
+                <itemlayout width="250">
+                    <control type="image">
+                        <centerleft>125</centerleft>
+                        <width>230</width>
+                        <height>360</height>
+                        <texture border="8">images/white.png</texture>
+                        <colordiffuse>77000000</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <centerleft>125</centerleft>
+                        <top>160</top>
+                        <height>45</height>
+                        <width>230</width>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <align>center</align>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <centerleft>125</centerleft>
+                        <top>200</top>
+                        <height>100</height>
+                        <width>230</width>
+                        <align>center</align>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="label" description="Conditions">
+                        <centerleft>125</centerleft>
+                        <top>290</top>
+                        <height>45</height>
+                        <width>230</width>
+                        <font>size21</font>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(Conditions)]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <height>150</height>
+                        <width>250</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="250">
+                    <control type="image">
+                        <centerleft>125</centerleft>
+                        <width>230</width>
+                        <height>360</height>
+                        <texture border="8">images/white.png</texture>
+                        <colordiffuse>77000000</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <centerleft>125</centerleft>
+                        <top>160</top>
+                        <height>45</height>
+                        <width>230</width>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <align>center</align>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label" description="temps">
+                        <centerleft>125</centerleft>
+                        <top>200</top>
+                        <height>100</height>
+                        <width>230</width>
+                        <align>center</align>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                    <control type="label" description="Conditions">
+                        <centerleft>125</centerleft>
+                        <top>290</top>
+                        <height>45</height>
+                        <width>230</width>
+                        <font>size21</font>
+                        <shadowcolor>dimgray</shadowcolor>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(Conditions)]</label>
+                    </control>
+                    <control type="image" description="Dayicon">
+                        <height>150</height>
+                        <width>250</width>
+                        <texture>$INFO[ListItem.thumb]</texture>
+                        <aspectratio align="center">keep</aspectratio>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="0">
+                        <label>33006</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day0.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day0.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day0.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day0.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="1">
+                        <label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day1.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day1.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day1.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day1.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="2">
+                        <label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day2.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day2.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day2.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day2.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="3">
+                        <label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day3.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day3.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day3.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day3.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="4">
+                        <label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day4.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day4.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day4.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day4.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="5">
+                        <label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day5.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day5.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day5.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day5.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="6">
+                        <label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+                        <label2>Max:  $INFO[Window(Weather).Property(Day6.HighTemp)] [CR]Min:  $INFO[Window(Weather).Property(Day6.LowTemp)]</label2>
+                        <property name="Conditions">$INFO[Window(Weather).Property(Day6.Outlook)]</property>
+                        <thumb>$INFO[Window(Weather).Property(Day6.FanartCode),weathershelf/,.png]</thumb>
+                        <onclick>noop</onclick>
+                    </item>
+                </content>
+            </control>
+        </control>
+    </include>
+</includes>

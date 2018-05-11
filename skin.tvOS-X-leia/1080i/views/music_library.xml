@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="LibraryList">
+      <control type="group" description="List" id="777">
+            <visible>Control.IsVisible(50)</visible>
+            <control type="image">
+                <animation condition="ControlGroup(9000).HasFocus()" effect="slide" time="300" start="0,0" end="0,140">Conditional</animation>
+                <left>1180</left>
+                <height>1080</height>
+                <width>740</width>
+                <texture>icons/White.png</texture>
+                <colordiffuse>$VAR[bannercolor]</colordiffuse>
+            </control>
+            <control type="label">
+                <visible>!ControlGroup(9000).HasFocus()</visible>
+                <animation effect="fade" time ="100" delay="200" start="0" end="100">VisibleChange</animation>
+                <top>60</top>
+                <left>1280</left>
+                <textcolor>darktext</textcolor>
+                <font>music</font>
+                <label>2</label>
+            </control>
+            <control type="panel" id="50">
+                <visible>![Container.content(albums) | Container.content(artists) | Container.content(songs)]</visible>
+                <left>1225</left>
+                <top>190</top>
+                <width>730</width>
+                <height>890</height>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+				<onup condition="!Skin.HasSetting(CBmode)">9000</onup>
+                <onup condition="Skin.HasSetting(CBmode)">50</onup>
+                <ondown>50</ondown>
+                <viewtype label="537">Big list</viewtype>
+                <preloaditems>4</preloaditems>
+                <scrolltime tween="sine" easing="inout">280</scrolltime>
+                <itemlayout width="630" height="80">
+                    <control type="label" description="Main Label">
+                        <left>25</left>
+                        <height>70</height>
+                        <width>600</width>
+                        <aligny>center</aligny>
+                        <scroll>false</scroll>
+                        <font>size39B</font>
+                        <textcolor>darktextunfo</textcolor>
+                        <shadowcolor></shadowcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="630" height="80">
+                    <control type="group">
+                        <animation effect="zoom" time="120" start="100" end="105" center="auto" tween="Back" easing="Out">Focus</animation>
+                        <control type="image">
+                            <top>12</top>
+                            <left>-50</left>
+                            <height>70</height>
+                            <width>730</width>
+                            <texture>shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <height>70</height>
+                            <width>650</width>
+                            <texture border="8">images/White.png</texture>
+                        </control>
+                        <control type="label" description="Main Label">
+                            <left>25</left>
+                            <height>70</height>
+                            <width>600</width>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <font>size39B</font>
+                            <textcolor>black</textcolor>
+                            <shadowcolor></shadowcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="list">
+                <height>1080</height>
+                <width>1280</width>
+                <orientation>horizontal</orientation>
+                <scrolltime>4500</scrolltime>
+                <autoscroll>true</autoscroll>
+                <itemlayout width="1080" height="1080">
+                    <control type="image">
+                        <width>1080</width>
+                        <height>1080</height>
+                        <info>ListItem.Icon</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="1080" height="1080">
+                    <control type="image">
+                        <width>1080</width>
+                        <height>1080</height>
+                        <info>ListItem.Icon</info>
+                    </control>
+                </focusedlayout>
+                <content>musicdb://albums/</content>
+            </control>
+        </control>
+    </include>
+</includes>

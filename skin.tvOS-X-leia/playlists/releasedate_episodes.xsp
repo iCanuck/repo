@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="episodes">
+    <name>Release Date Episodes</name>
+    <match>all</match>
+	<order direction="descending">year</order>
+	<!--rule field="path" operator="contains"><value>N3W</value></rule-->
+</smartplaylist>

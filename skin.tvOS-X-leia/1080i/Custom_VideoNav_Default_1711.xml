@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1711">
+  <defaultcontrol>9000</defaultcontrol>
+  <include>DialogOpenClose</include>
+  <controls>
+
+	<control type="image" description="List back border">
+	  <centerleft>960</centerleft>
+	  <centertop>540</centertop>
+	  <width>738</width>
+	  <height>582</height>
+	  <aspectratio>stretch</aspectratio>
+	  <texture>$VAR[BorderColor]</texture>	  
+	</control>	
+	<control type="image" description="List back">
+		<centerleft>960</centerleft>
+		<centertop>540</centertop>
+		<width>802</width>
+		<height>646</height>
+		<aspectratio>stretch</aspectratio>
+		<include condition="String.IsEmpty(Skin.String(CustomBgDialog)) + String.IsEmpty(Skin.String(CustomBgHome)) + ![Skin.HasTheme(Dark)|Skin.HasTheme(White)]">DialogTexture</include>
+		<include condition="!String.IsEmpty(Skin.String(CustomBgDialog)) | !String.IsEmpty(Skin.String(CustomBgHome)) | Skin.HasTheme(Dark) | Skin.HasTheme(White)">DialogTextureBG</include>		
+	</control>	
+	<control type="image" description="List back diffuse">
+		<centerleft>960</centerleft>
+		<centertop>540</centertop>
+		<width>802</width>
+		<height>646</height>
+		<aspectratio>stretch</aspectratio>
+		<texture border="50" colordiffuse="$VAR[diffusedialog]" diffuse="images/DialogDiffuse.png">images/whitebg.png</texture>
+	</control> 
+	
+    <control type="grouplist" id="9000">
+      <centertop>528</centertop>
+      <height>580</height>
+      <align>center</align>
+      <include>DialogGLs</include> 
+	  <control type="label" id="99" description="Dialog heading">
+		<width>545</width>
+		<height>112</height>
+		<label>$LOCALIZE[31111]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>size30</font>
+		<textcolor>darktextunfo</textcolor>
+	  </control>	  
+	  <control type="radiobutton" id="1">
+		<label>$LOCALIZE[537]</label>
+		<onclick>Skin.ToggleSetting(View50list)</onclick>
+		<onclick condition="Skin.HasSetting(View53icon)">Skin.ToggleSetting(View53icon)</onclick>
+		<onclick condition="Skin.HasSetting(View55banner)">Skin.ToggleSetting(View55banner)</onclick>
+		<onclick condition="Skin.HasSetting(View500fanart)">Skin.ToggleSetting(View500fanart)</onclick>		
+		<onclick condition="Skin.HasSetting(View501widelist)">Skin.ToggleSetting(View501widelist)</onclick>					
+		<selected>Skin.HasSetting(View50list)</selected>				
+	  </control>
+	  <control type="radiobutton" id="2">
+		<label>$LOCALIZE[536]</label>
+		<onclick>Skin.ToggleSetting(View53icon)</onclick>
+		<onclick condition="Skin.HasSetting(View50list)">Skin.ToggleSetting(View50list)</onclick>
+		<onclick condition="Skin.HasSetting(View55banner)">Skin.ToggleSetting(View55banner)</onclick>
+		<onclick condition="Skin.HasSetting(View500fanart)">Skin.ToggleSetting(View500fanart)</onclick>		
+		<onclick condition="Skin.HasSetting(View501widelist)">Skin.ToggleSetting(View501widelist)</onclick>					
+		<selected>Skin.HasSetting(View53icon)</selected>				
+	  </control>
+	  <control type="radiobutton" id="3">
+		<label>$LOCALIZE[31002] $LOCALIZE[31112]</label>
+		<onclick>Skin.ToggleSetting(View55banner)</onclick>
+		<onclick condition="Skin.HasSetting(View50list)">Skin.ToggleSetting(View50list)</onclick>
+		<onclick condition="Skin.HasSetting(View53icon)">Skin.ToggleSetting(View53icon)</onclick>
+		<onclick condition="Skin.HasSetting(View500fanart)">Skin.ToggleSetting(View500fanart)</onclick>		
+		<onclick condition="Skin.HasSetting(View501widelist)">Skin.ToggleSetting(View501widelist)</onclick>					
+		<selected>Skin.HasSetting(View55banner)</selected>				
+	  </control>
+	  <control type="radiobutton" id="4">
+		<label>$LOCALIZE[20445]</label>
+		<onclick>Skin.ToggleSetting(View500fanart)</onclick>
+		<onclick condition="Skin.HasSetting(View50list)">Skin.ToggleSetting(View50list)</onclick>
+		<onclick condition="Skin.HasSetting(View53icon)">Skin.ToggleSetting(View53icon)</onclick>
+		<onclick condition="Skin.HasSetting(View55banner)">Skin.ToggleSetting(View55banner)</onclick>			
+		<onclick condition="Skin.HasSetting(View501widelist)">Skin.ToggleSetting(View501widelist)</onclick>					
+		<selected>Skin.HasSetting(View500fanart)</selected>				
+	  </control>	  
+	  <control type="radiobutton" id="5">
+		<label>$LOCALIZE[539] $LOCALIZE[535]</label>
+		<onclick>Skin.ToggleSetting(View501widelist)</onclick>
+		<onclick condition="Skin.HasSetting(View50list)">Skin.ToggleSetting(View50list)</onclick>
+		<onclick condition="Skin.HasSetting(View53icon)">Skin.ToggleSetting(View53icon)</onclick>
+		<onclick condition="Skin.HasSetting(View55banner)">Skin.ToggleSetting(View55banner)</onclick>
+		<onclick condition="Skin.HasSetting(View500fanart)">Skin.ToggleSetting(View500fanart)</onclick>			
+		<selected>Skin.HasSetting(View501widelist)</selected>				
+	  </control>
+    </control>
+  </controls>
+</window>
